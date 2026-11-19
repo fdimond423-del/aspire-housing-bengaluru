@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Corporate Office Directory | ASPIRE HOUSING</title>
+  <meta name="description" content="Contact Aspire Housing Corporate Office in Jayanagar, Bangalore. Call +91 70905 32343, WhatsApp, or schedule an in-person meeting with our investment team.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger ">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+917090532343" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 70905 32343</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link ">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link ">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link active">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+    </div>
+  </div>
+  
+
+  <main style="padding-top:100px;">
+    <!-- Page Header Banner -->
+    <section class="section" style="padding-bottom:3rem; border-bottom:1px solid var(--border-subtle);">
+      <div class="section-container" data-aos="fade-up">
+        <span class="section-tag">Bengaluru Corporate Headquarters</span>
+        <h1 class="section-title" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); max-width:850px;">
+          Connect With Aspire Housing.
+        </h1>
+        <p class="section-subtitle" style="max-width:800px;">
+          Our corporate advisory office in Jayanagar welcomes property buyers, institutional developers, and investors for detailed portfolio consultations and on-ground site inspections.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact & Details Grid -->
+    <section class="section">
+      <div class="section-container">
+        <div class="bento-grid">
+          <!-- Corporate Directory Card -->
+          <div class="col-5" data-aos="fade-right">
+            <div class="glass-card" data-tilt style="height:100%; border-color:var(--orange-border);">
+              <span class="section-tag">Executive Headquarters</span>
+              <h3 style="font-size:1.6rem; font-weight:800; color:#fff; margin:0.5rem 0 1.5rem;">Corporate Office Directory</h3>
+              
+              <div style="margin-bottom:1.6rem;">
+                <div style="font-size:0.75rem; color:var(--orange-bright); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Registered Office Address</div>
+                <div style="color:#fff; font-size:1.05rem; font-weight:600; line-height:1.6;">
+                  Aspire Housing Corporate HQ<br>
+                  Lakshmi Enclave, #1571, 2nd Floor,<br>
+                  East End Main Road, Jayanagar 9th Block,<br>
+                  Bangalore – 560069, Karnataka, India
+                </div>
+              </div>
+
+              <div style="margin-bottom:1.6rem;">
+                <div style="font-size:0.75rem; color:var(--orange-bright); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Direct Telephone & WhatsApp</div>
+                <div style="font-size:1.35rem; font-weight:900;">
+                  <a href="tel:+917090532343" style="color:#fff; text-decoration:none;">+91 70905 32343</a>
+                </div>
+                <p style="color:var(--text-dim); font-size:0.82rem; margin-top:4px;">Available Monday – Sunday (9:00 AM – 7:30 PM IST)</p>
+              </div>
+
+              <div style="margin-bottom:1.6rem;">
+                <div style="font-size:0.75rem; color:var(--orange-bright); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Official Email Desk</div>
+                <div style="font-size:1.05rem; font-weight:600;">
+                  <a href="mailto:info@thepurplepalms.com" style="color:var(--orange); text-decoration:none;">info@thepurplepalms.com</a>
+                </div>
+              </div>
+
+              <div style="margin-bottom:1.8rem;">
+                <div style="font-size:0.75rem; color:var(--orange-bright); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Official Web Portal</div>
+                <div style="font-size:0.95rem; color:var(--text-muted);">
+                  https://thepurplepalms.com/
+                </div>
+              </div>
+
+              <div style="display:flex; gap:1rem; margin-top:2rem;">
+                <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20to%20inquire%20about%20your%20properties" target="_blank" class="btn-primary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="tel:+917090532343" class="btn-secondary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>Call Us</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Priority Inquiry Form -->
+          <div class="col-7" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="border:1px solid var(--border-medium); padding:2.5rem;">
+              <span class="section-tag">Direct Inquiry Flow</span>
+              <h3 style="font-size:1.6rem; font-weight:800; color:#fff; margin:0.5rem 0 0.8rem;">Request Comprehensive Information</h3>
+              <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:1.8rem;">
+                Fill out the form below to receive official project brochures, RERA legal dossier, and rate sheets directly on WhatsApp.
+              </p>
+
+              <form onsubmit="event.preventDefault(); alert('Thank you! Your information request has been received. Our senior property advisor will call you within 15 minutes.'); this.reset();">
+                <div class="bento-grid" style="gap:1rem; margin-bottom:1.25rem;">
+                  <div class="col-6">
+                    <div class="form-input-group" style="margin-bottom:0;">
+                      <label class="form-label">Full Name *</label>
+                      <input type="text" class="form-control" placeholder="Your full name" required />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-input-group" style="margin-bottom:0;">
+                      <label class="form-label">Phone Number (WhatsApp) *</label>
+                      <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-input-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" placeholder="your.email@example.com" required />
+                </div>
+
+                <div class="form-input-group">
+                  <label class="form-label">Development Project of Interest</label>
+                  <select class="form-control" style="background:#111520;">
+                    <option>KHB Surya City Phase-4 (Bannerghatta Road Jigani - ₹46.80L+)</option>
+                    <option>Nandi Urban City (Devanahalli Airport Corridor - 12 Acres)</option>
+                    <option>AP Township (Near Electronic City - 30 Acres BMRDA)</option>
+                    <option>Habulus Tranquil (Neo Town 2 & 3 BHK - ₹90L+)</option>
+                    <option>Institutional Real Estate Advisory & Liaison</option>
+                  </select>
+                </div>
+
+                <div class="form-input-group">
+                  <label class="form-label">Specific Questions or Plot Size Requirements</label>
+                  <textarea class="form-control" rows="3" placeholder="Tell us your investment timeline, preferred plot dimensions (30x40, 40x60) or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">
+                  Submit Priority Inquiry &rarr;
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map & Location Guidance -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container" data-aos="fade-up">
+        <div class="section-header">
+          <span class="section-tag">Convenient Accessibility</span>
+          <h2 class="section-title">Visit Our Jayanagar Corporate Office</h2>
+          <p class="section-subtitle">Located conveniently in Lakshmi Enclave, Jayanagar 9th Block with dedicated visitor parking and executive briefing lounge.</p>
+        </div>
+
+        <div class="glass-card" style="padding:0; overflow:hidden; border:1px solid var(--border-medium);">
+          <div style="background:#161922; padding:1.8rem 2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="color:var(--orange);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <div style="font-size:1.15rem; font-weight:700; color:#fff;">Lakshmi Enclave, East End Main Road</div>
+                <div style="font-size:0.85rem; color:var(--text-muted); margin-top:2px;">Jayanagar 9th Block, Bangalore – 560069 | Near Ragigudda Temple & Silk Board Junction</div>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=Jayanagar+9th+Block+Bangalore" target="_blank" class="btn-secondary" style="font-size:0.85rem;">
+              Open in Google Maps &rarr;
+            </a>
+          </div>
+          <div style="height:350px; background:#0b0d14; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80" alt="Bangalore City Map Overview" style="width:100%; height:100%; object-fit:cover; opacity:0.35;" />
+            <div style="position:absolute; background:rgba(8,10,15,0.88); backdrop-filter:blur(12px); padding:1.8rem 2.4rem; border-radius:18px; border:1px solid var(--orange-border); text-align:center;">
+              <div style="color:var(--orange-bright); margin-bottom:0.6rem; display:flex; justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
+              <div style="font-size:1.2rem; font-weight:800; color:#fff;">ASPIRE HOUSING CORPORATE HQ</div>
+              <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px; font-weight:600;">Lakshmi Enclave, Jayanagar 9th Block, Bangalore</div>
+              <div style="font-size:0.82rem; color:var(--text-dim); margin-top:8px;">Direct Line: +91 70905 32343</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 70905 32343</span>
+            </a>
+            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

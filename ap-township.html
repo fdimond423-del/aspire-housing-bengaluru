@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Township | ASPIRE HOUSING — 30-Acre BMRDA & RERA Approved Community</title>
+  <meta name="description" content="AP Township near Electronic City - 30-Acre BMRDA & RERA approved township with 500 premium plots, 18,000+ trees, 8 themed parks, and 50+ lifestyle amenities.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger active">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link ">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+917090532343" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 70905 32343</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link ">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link ">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link ">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+    </div>
+  </div>
+  
+
+  <main style="padding-top:76px;">
+    <!-- Project Hero Header Banner -->
+    <section class="project-detail-hero">
+      <div class="project-detail-hero-bg">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1920&q=85" alt="AP Township Gated Community" />
+      </div>
+      <div class="project-detail-hero-overlay"></div>
+
+      <div class="project-detail-hero-content">
+        <div class="breadcrumbs-nav" data-aos="fade-down">
+          <a href="index.html">Home</a> <span>/</span>
+          <a href="projects.html">Projects</a> <span>/</span>
+          <span style="color:#fff;">AP Township</span>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
+          <span class="project-badge-tag badge-pulse">BMRDA & RERA Approved</span>
+          <span class="project-price-tag">Project RERA # PRM/KA/RERA/1251/308/PR/220118/004642</span>
+        </div>
+
+        <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">
+          AP Township – Live Where Comfort Meets Everyday Luxury
+        </h1>
+        <p class="section-subtitle" style="max-width:850px; font-size:1.15rem;" data-aos="fade-up" data-aos-delay="300">
+          Premium 30-acre BMRDA & RERA-approved villa township with 8 themed parks, grand clubhouse, swimming pool, and modern infrastructure strategically located near Electronic City for high growth and long-term value.
+        </p>
+
+        <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;" data-aos="fade-up" data-aos-delay="400">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="AP Township BMRDA" style="padding:14px 32px; font-size:1rem;">
+            Schedule a Site Visit &rarr;
+          </button>
+          <a href="#amenities" class="btn-secondary" style="padding:14px 28px; font-size:1rem;">
+            Explore 50+ Amenities
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-7" data-aos="fade-right">
+            <span class="section-tag">Modern Living in a Lush Green Township</span>
+            <h2 style="font-size:2.2rem; font-weight:800; color:#fff; margin-bottom:1.25rem;">
+              Crafted For Families, Designed for Generations
+            </h2>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+              At AP Township, exceptional planning blends seamlessly with modern living. Spread across <strong>30 acres</strong>, this BMRDA & RERA-approved premium villa township is crafted to offer a refined lifestyle with <strong>wide 30 & 40 ft concrete roads</strong>, underground utilities, and thoughtfully curated theme parks.
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+              Designed with <strong>over 18,000 trees and 48% open green spaces</strong>, AP Township prioritizes health, nature, and recreation. Residents enjoy access to multiple theme parks, sports facilities, jogging tracks, kids’ play areas, senior zones, an amphitheatre, and a fully equipped clubhouse — all planned to elevate everyday living.
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8;">
+              The development includes <strong>500 well-demarcated villa plots</strong>, ensuring a safe, organized, and future-ready community for families and investors alike.
+            </p>
+          </div>
+
+          <div class="col-5" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="border:1px solid var(--orange-border); background:rgba(18,21,30,0.95);">
+              <h3 style="font-size:1.35rem; font-weight:800; color:#fff; margin-bottom:1.2rem;">Township Highlights</h3>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.95rem; color:var(--text-muted); font-size:0.95rem;">
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Statutory Approval:</span> <strong style="color:var(--orange-bright);">BMRDA & RERA Approved</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Township Area:</span> <strong style="color:#fff;">30 Acres Planned</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Total Villa Plots:</span> <strong style="color:#fff;">500 Premium Plots</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Themed Parks:</span> <strong style="color:#fff;">8 Themed Parks</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Eco Density:</span> <strong style="color:#fff;">18,000+ Trees (48% Green)</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; padding-top:4px;">
+                  <span>Lifestyle Amenities:</span> <strong style="color:var(--orange-bright);">50+ Dedicated Amenities</strong>
+                </li>
+              </ul>
+              <div style="margin-top:1.2rem; font-size:0.75rem; color:var(--text-dim); text-align:center;">
+                Project RERA # PRM/KA/RERA/1251/308/PR/220118/004642
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Grid -->
+    <section class="section" id="amenities" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Fine-Living Standard</span>
+          <h2 class="section-title">Amenities That Add New Dimensions To Fine-Living</h2>
+          <p class="section-subtitle">Crafted for wellness, recreation, and community living with over 50+ luxury features.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
+              <h3 class="pillar-title">Clubhouse & Multipurpose Room</h3>
+              <p class="pillar-desc">A vibrant, high-ceiling architectural space for community celebrations, indoor recreation, fitness, and family functions.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c2 0 3-1.5 5-1.5s3 1.5 5 1.5 3-1.5 5-1.5 3 1.5 5 1.5"/><path d="M2 16c2 0 3-1.5 5-1.5s3 1.5 5 1.5 3-1.5 5-1.5 3 1.5 5 1.5"/><path d="M15 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M16 10l-4 4"/></svg></div>
+              <h3 class="pillar-title">Swimming Pool & Guest Suites</h3>
+              <p class="pillar-desc">Resort-style infinity edge pool with poolside sun loungers, change rooms, and dedicated luxury guest suites for visiting family.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
+              <h3 class="pillar-title">Private Mini Theatre</h3>
+              <p class="pillar-desc">An acoustic-treated private cinema zone for high-definition screenings, movie nights, and sports match viewings.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 12h5l-3 7h12l-3-7h5L12 2z"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
+              <h3 class="pillar-title">Theme Parks & Nature Viewpoints</h3>
+              <p class="pillar-desc">Beautifully landscaped horticultural gardens and elevated sit-out viewpoints promoting outdoor wellness and calmness.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19L9 5"/><path d="M20 19L15 5"/><line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="13" x2="12" y2="15"/></svg></div>
+              <h3 class="pillar-title">Walking & Jogging Tracks</h3>
+              <p class="pillar-desc">Scenic shaded tree-lined pathways that support daily morning jogs, cardiovascular fitness, and brisk evening strolls.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+              <h3 class="pillar-title">All-Weather Sports Facilities</h3>
+              <p class="pillar-desc">Dedicated courts and practice areas for cricket nets, basketball, badminton, tennis, and active recreational games.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Advantages -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Electronic City Corridor</span>
+          <h2 class="section-title">Live at the Epicenter of Bengaluru’s High-Growth Zone</h2>
+          <p class="section-subtitle">Surrounded by leading tech giants, international schools, and premier hospitals.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <h4 style="color:var(--orange-bright); font-size:1.1rem; margin-bottom:0.75rem;">Corporate & Tech Hubs</h4>
+              <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Infosys, Wipro, TCS, Tech Mahindra, Biocon, HP, and Electronic City Phase 1 & 2 campuses just minutes away.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <h4 style="color:var(--orange-bright); font-size:1.1rem; margin-bottom:0.75rem;">Reputed Schools & Colleges</h4>
+              <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Delhi Public School, Ebenezer International, Treamis World School, PES University, and Azim Premji University.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <h4 style="color:var(--orange-bright); font-size:1.1rem; margin-bottom:0.75rem;">Super-Specialty Healthcare</h4>
+              <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">Narayana Health City, Mazumdar Shaw Cancer Centre, Kauvery Hospital, and Apollo Clinic within close reach.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:3.5rem;" data-aos="fade-up">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="AP Township BMRDA" style="padding:14px 34px; font-size:1rem;">
+            Book Your AP Township Plot Inspection &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 70905 32343</span>
+            </a>
+            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

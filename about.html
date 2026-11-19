@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ASPIRE HOUSING — Vision, Mission & Key Pillars</title>
+  <meta name="description" content="Learn how Aspire Housing brings order to the fragmented real estate sector through structured, transparent, customer-first property development and advisory.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger ">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link ">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+917090532343" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 70905 32343</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link ">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link active">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link ">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+    </div>
+  </div>
+  
+
+  <main style="padding-top:100px;">
+    <!-- Page Header Banner -->
+    <section class="section" style="padding-bottom:3rem; border-bottom:1px solid var(--border-subtle);">
+      <div class="section-container" data-aos="fade-up">
+        <span class="section-tag">Our Origin & Ethos</span>
+        <h1 class="section-title" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); max-width:850px;">
+          Redefining Real Estate through <span class="highlight text-shimmer">Uncompromising Transparency</span> & Vision.
+        </h1>
+        <p class="section-subtitle" style="max-width:780px;">
+          The Route of the company lies in the shared passion for bringing order to a highly disorganised Real Estate sector.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Origin & Narrative -->
+    <section class="section">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-7" data-aos="fade-right">
+            <h2 style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:1.5rem;">
+              About ASPIRE HOUSING
+            </h2>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1.25rem;">
+              The journey started when we discussed reimagining the Real Estate space with new ways of working. Our common ethics and values laid the foundation of <strong>ASPIRE HOUSING’s</strong> value-oriented culture with a clear focus on bringing about transparency in the Real Estate sector.
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1.25rem;">
+              The idea was to deliver more than just properties, it was about bringing solutions and experiences. The roadmap was to boost transparency and improve communication between all buyers or investors in the Real Estate industry. This would eventually lead to more informed decision-making. Since the early days, we have been working towards this broader goal.
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8;">
+              Having successfully predicted the real estate boom in India that has been evident for the last few years, we formed ASPIRE HOUSING based on this belief and scaled it up to divisions across different value proposals in Real Estate. We have grown from being a residential property-focused company to operating across multiple real estate activity verticals, with a marked presence across all segments of the value chain.
+            </p>
+          </div>
+
+          <div class="col-5" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Aspire Housing Architecture" style="width:100%; height:440px; object-fit:cover;" />
+              <div style="padding:1.5rem; background:rgba(12,15,22,0.95);">
+                <div style="font-size:1.2rem; font-weight:800; color:#fff;">Formidable Industry Force</div>
+                <p style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Deploying bespoke tools & technology across all business lines</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Cards -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="bento-grid">
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt style="height:100%; border-left:4px solid var(--orange);">
+              <span class="section-tag">Guiding Horizon</span>
+              <h3 style="font-size:1.8rem; font-weight:800; color:#fff; margin:0.5rem 0 1.25rem;">The Vision</h3>
+              <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+                Our vision is to create enduring value through strategic development, innovative marketing, and deep commitment to building <strong>sustainable communities</strong> where transparency, ethics, and innovation lead every step of the real estate journey, empowering individuals and communities alike.
+              </p>
+              <p style="color:var(--text-muted); font-size:1rem; line-height:1.8;">
+                We aim to improve the lives of clients, tenants, and employees by delivering uncompromising, high-quality real estate services across every touchpoint.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt style="height:100%; border-left:4px solid var(--orange-bright);">
+              <span class="section-tag">Active Purpose</span>
+              <h3 style="font-size:1.8rem; font-weight:800; color:#fff; margin:0.5rem 0 1.25rem;">The Mission</h3>
+              <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+                Our mission is to transform land into thriving communities through strategic development, transparent practices, and ethical engagement. We are committed to delivering legally clear, well-planned, and future-ready plots that offer enduring value, ensuring timely execution, customer satisfaction, and sustainable growth.
+              </p>
+              <div style="background:rgba(255,87,34,0.08); border-radius:12px; padding:1.2rem; border:1px solid var(--orange-border); margin-top:1.5rem;">
+                <div style="font-size:1.15rem; font-weight:800; color:#fff; font-style:italic;">
+                  "Turning ‘For Sale’ signs into Home Sweet Home and Sold stories."
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 Key Pillars (Core Values) -->
+    <section class="section" id="values">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Core Value Architecture</span>
+          <h2 class="section-title">The 7 Pillars of Aspire Housing</h2>
+          <p class="section-subtitle">
+            Honesty, integrity, and professionalism are placed above all else. We understand that we are here to deliver measurable results and exceed client expectations.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <h3 class="pillar-title">1. Transparency</h3>
+              <p class="pillar-desc">Open, honest, and clear communication with every stakeholder — from initial landowners to first-time homebuyers and institutional investors.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+              <h3 class="pillar-title">2. Integrity</h3>
+              <p class="pillar-desc">Ethical conduct is the foundation of our business. We uphold the highest standards of honesty, full statutory compliance, and executive accountability.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/></svg></div>
+              <h3 class="pillar-title">3. Customer Centricity</h3>
+              <p class="pillar-desc">We prioritize customer needs, preferences, and long-term satisfaction. Every decision is shaped to protect and grow our client's wealth.</p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 6.5 10.45a1.8 1.8 0 0 1 .006-1.775l4.08-7.054a1.815 1.815 0 0 1 1.57-.896c.64 0 1.228.34 1.565.885l1.6 2.775"/><path d="M18.8 8h-4.6"/><path d="m16.8 6 2 2-2 2"/></svg></div>
+              <h3 class="pillar-title">4. Sustainability</h3>
+              <p class="pillar-desc">We champion responsible land use, rainwater harvesting, underground utilities, and environmentally conscious development, creating sustainable communities that are future-ready.</p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <h3 class="pillar-title">5. Innovation</h3>
+              <p class="pillar-desc">We embrace technological advancements and bespoke digital tools to enhance value across the entire property development and investment lifecycle.</p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5a1.5 1.5 0 0 0-1.5 1.5v.5h12v-.5a1.5 1.5 0 0 0-1.5-1.5H15c-.55 0-1-.45-1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
+              <h3 class="pillar-title">6. Quality Excellence</h3>
+              <p class="pillar-desc">We never compromise on quality — whether it is township layout planning, blacktop roads, Cauvery water integration, or the overall customer experience.</p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
+              <h3 class="pillar-title">7. Trust & Long-Term Value</h3>
+              <p class="pillar-desc">We earn trust through reliability, legal security, and compounding value appreciation over time, cultivating lifelong relationships with our clients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 70905 32343</span>
+            </a>
+            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

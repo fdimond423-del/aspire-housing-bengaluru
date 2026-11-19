@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASPIRE HOUSING | Built on Trust. Backed by Transparency.</title>
+  <meta name="description" content="Aspire Housing - Delivering clients more project clarity & greater insight across Bengaluru's premier plotted townships and luxury residential developments.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  
+  <!-- Animated Logo Preloader (Only Logo - High Impact Presentation) -->
+  <div id="logoIntroPreloader">
+    <div class="intro-ambient-glow"></div>
+    <div class="intro-logo-box">
+      <svg class="intro-logo-svg" viewBox="0 0 320 280">
+        <defs>
+          <linearGradient id="introSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF6B00" />
+            <stop offset="50%" stop-color="#FF5100" />
+            <stop offset="100%" stop-color="#E53900" />
+          </linearGradient>
+          <linearGradient id="introGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFA040" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#FF3D00" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="98" r="58" fill="url(#introSunGrad)" />
+        <polygon points="160,24 184,80 160,70 136,80" fill="#0D0E12" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+        <polygon points="160,54 200,108 160,96 120,108" fill="#0D0E12" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+        <polygon points="160,78 218,136 160,122 102,136" fill="#0D0E12" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" />
+        <line x1="160" y1="24" x2="160" y2="122" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+        <text x="160" y="196" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="900" letter-spacing="4" fill="#FFFFFF">ASPIRE</text>
+        <text x="160" y="234" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" letter-spacing="12" fill="#FF5500">HOUSING</text>
+        <text x="160" y="258" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" letter-spacing="3" fill="#94A3B8">BUILT ON TRUST. BACKED BY TRANSPARENCY.</text>
+      </svg>
+      <div class="intro-loading-bar">
+        <div class="intro-loading-progress"></div>
+      </div>
+    </div>
+    <button id="skipIntroBtn" class="intro-skip-btn">Skip Intro &rarr;</button>
+  </div>
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger ">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link ">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+917090532343" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 70905 32343</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link active">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link ">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link ">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+    </div>
+  </div>
+  
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Aspire Housing Luxury Real Estate" class="hero-bg-img" />
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-split-grid">
+          <!-- Left Column: Hero Text & Counters -->
+          <div>
+            <div class="hero-badge-pill" data-aos="fade-down" data-aos-duration="600">
+              <span class="dot"></span>
+              <span>Bengaluru's Premier Real Estate Advisory</span>
+            </div>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              Delivering our clients more <span class="highlight text-shimmer">project clarity</span> & greater insight.
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              Aspire Housing was founded as an emerging entity in the Real Estate sector, motivated by a shared ambition to introduce order to this frequently tumultuous industry. Our journey commenced with conversations focused on re-imagining the Real Estate environment through innovative approaches. The shared ethics and values we adhere to have formed the culture at Aspire Housing, which prioritizes transparency in the industry.
+            </p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:1rem;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <a href="projects.html" class="btn-primary" style="padding:14px 32px; font-size:1rem;">Explore Master Projects &rarr;</a>
+              <button class="btn-secondary" data-open-modal="visit" data-project-name="General Inquiry" style="padding:14px 28px; font-size:1rem;">Book a Private Site Tour</button>
+            </div>
+
+            <!-- Hero Stats Row -->
+            <div class="hero-stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="hero-stat-item">
+                <div class="hero-stat-number"><span data-counter="2400" data-suffix="+">2,400+</span> <span class="accent">Acres</span></div>
+                <div class="hero-stat-label">Township Footprint</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-number"><span data-counter="36500" data-suffix="+">36,500+</span></div>
+                <div class="hero-stat-label">Demarcated Villa Plots</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-number"><span data-counter="100" data-suffix="%">100%</span></div>
+                <div class="hero-stat-label">RERA & STRRPA Approved</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-number"><span class="accent">₹</span><span data-counter="46" data-suffix=".80L*">46.80L*</span></div>
+                <div class="hero-stat-label">Plots Starting Price</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Showcase Image Card with Floating Badges -->
+          <div class="hero-visual-container" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
+            <!-- Floating Badge Top -->
+            <div class="hero-floating-badge">
+              <span style="width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow:0 0 10px #10b981; display:inline-block;"></span>
+              <div>
+                <div style="font-size:0.72rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">Government Mega Layout</div>
+                <div style="font-size:0.92rem; color:#fff; font-weight:800;">KHB Surya City • 2,400 Acres</div>
+              </div>
+            </div>
+
+            <!-- Main Showcase Image Card -->
+            <div class="hero-visual-card" data-tilt>
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85" alt="Aspire Housing Prime Villa Estates" class="hero-visual-img" />
+              <div class="hero-visual-gradient"></div>
+              <div class="hero-visual-content">
+                <span class="hero-visual-tag">Featured Master Development</span>
+                <div class="hero-visual-title">Luxury Villa Living & Strategic Plotted Land</div>
+                <div class="hero-visual-desc">Electronic A-Khata • Zero Lease Period • Cauvery Water Guaranteed</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom -->
+            <div class="hero-floating-badge-bottom">
+              <div style="background:var(--orange-soft); color:var(--orange-bright); border-radius:10px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border:1px solid var(--orange-border);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.72rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">RERA & BDA Approved</div>
+                <div style="font-size:0.92rem; color:#fff; font-weight:800;">Plots Starting ₹3,900 / sq.ft*</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker Rail -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <div class="ticker-item"><span>KHB Surya City Phase-4</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Nandi Urban City Devanahalli</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>AP Township BMRDA & RERA Approved</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Habulus Tranquil 2 & 3 BHK</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Electronic A-Khata</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Zero Lease Period</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Cauvery Water Connectivity</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>KHB Surya City Phase-4</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Nandi Urban City Devanahalli</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>AP Township BMRDA & RERA Approved</span> <span class="dot"></span></div>
+      </div>
+    </div>
+
+    <!-- Featured Master Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="700">
+          <span class="section-tag">Bengaluru Flagship Portfolio</span>
+          <h2 class="section-title">Our Prime Real Estate Developments</h2>
+          <p class="section-subtitle">
+            Explore meticulously planned residential townships and luxury gated communities offering supreme legal clarity, government-backed infrastructure, and soaring capital appreciation.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Project 1: KHB Surya City Phase-4 -->
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card" data-tilt>
+              <div class="project-card-image-box">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="KHB Surya City Phase 4" class="project-card-img" />
+                <span class="project-badge-tag">Government Backed • KHB</span>
+                <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
+              </div>
+              <div class="project-card-body">
+                <div class="project-location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Bannerghatta Road, Jigani, Bengaluru</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="khb-suryacity.html">KHB Surya City Phase – 4</a>
+                </h3>
+                <p class="project-description">
+                  Surya City Phase-4: Asia’s Largest Residential Layout Bengaluru’s 2400-Acre Mega Township. We are thrilled to announce the launch of 36,000 residential villa plots developed in collaboration with farmers under Karnataka Housing Board with Cauvery water, 60-acre Sports Club, and STRRPA approval.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Township Size</span>
+                    <span class="spec-value">2,400 Acres</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Plot Dimensions</span>
+                    <span class="spec-value">30x40 to 40x60</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Approval</span>
+                    <span class="spec-value">STRRPA / BBMP</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="khb-suryacity.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Layout Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="KHB Surya City Phase-4" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Nandi Urban City Devanahalli -->
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card" data-tilt>
+              <div class="project-card-image-box">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Nandi Urban City Devanahalli" class="project-card-img" />
+                <span class="project-badge-tag">Airport Corridor • BIAAPA</span>
+                <span class="project-price-tag">Exclusive Launch Pricing</span>
+              </div>
+              <div class="project-card-body">
+                <div class="project-location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Devanahalli, North Bengaluru (10 Mins to Airport)</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="nandi-urban-city.html">Nandi Urban City – Where Weekends Begin Every Day</a>
+                </h3>
+                <p class="project-description">
+                  Located in Devanahalli, North Bengaluru — Nandi Urban City is a serene 12-acre BIAAPA-approved plotted development, just minutes from Kempegowda International Airport and surrounded by Nandi Hills, offering the ideal blend of nature, connectivity, and future-ready infrastructure with 7 landscaped parks.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Land Extent</span>
+                    <span class="spec-value">12 Acres Gated</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Total Units</span>
+                    <span class="spec-value">147 Villa Plots</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Mansion Plots</span>
+                    <span class="spec-value">3,000+ sq.ft</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="nandi-urban-city.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Master Plan &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AP Township -->
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card" data-tilt>
+              <div class="project-card-image-box">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80" alt="AP Township" class="project-card-img" />
+                <span class="project-badge-tag">RERA & BMRDA Approved</span>
+                <span class="project-price-tag">High Growth Corridor</span>
+              </div>
+              <div class="project-card-body">
+                <div class="project-location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Near Electronic City, Bengaluru</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="ap-township.html">AP Township – Live Where Comfort Meets Luxury</a>
+                </h3>
+                <p class="project-description">
+                  A BMRDA & RERA-approved 30-acre township featuring 500 premium plots and exceptional infrastructure. Strategically located near Electronic City for high growth, featuring 18,000+ trees, 48% open green space, 8 themed parks, and over 50+ lifestyle amenities including clubhouse and swimming pool.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Open Green</span>
+                    <span class="spec-value">48% Greenery</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Total Trees</span>
+                    <span class="spec-value">18,000+ Trees</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">RERA ID</span>
+                    <span class="spec-value">PRM/KA/...4642</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="ap-township.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Explore Amenities &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="AP Township" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Habulus Tranquil -->
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card" data-tilt>
+              <div class="project-card-image-box">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Habulus Tranquil Apartments" class="project-card-img" />
+                <span class="project-badge-tag">Neo Town High-Rise</span>
+                <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
+              </div>
+              <div class="project-card-body">
+                <div class="project-location">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Neo Town, Next to Electronic City</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="habulus-tranquil.html">Habulus Tranquil – Rise To A Life Of Prestige</a>
+                </h3>
+                <p class="project-description">
+                  Spread across 5 Acres of Land, Habulus Tranquil is a premium gated community in Neo Town, Electronic City – designed for comfort, convenience, and class. Features 4 elegant towers of B+S+16 floors, 496 premium flats, 25,000 sq.ft clubhouse, 100% Vastu compliance, and zero common walls.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Structure</span>
+                    <span class="spec-value">B+S+16 Floors</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Grand Club</span>
+                    <span class="spec-value">25,000 Sq.Ft</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Technology</span>
+                    <span class="spec-value">MIVAN Formwork</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="habulus-tranquil.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Floor Plans & Specs &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Habulus Tranquil" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Services Overview Section -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">End-to-End Excellence</span>
+          <h2 class="section-title">Building better, together.</h2>
+          <p class="section-subtitle">
+            At Aspire Housing, we deliver actionable insights for individuals, families, and businesses across Bengaluru, covering every phase from site selection to project launch.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+              <h3 class="pillar-title">Real Estate & Investment Advisory</h3>
+              <p class="pillar-desc">
+                Pinpointing Bengaluru’s high-growth corridors, major infrastructure projects, and prime micro-markets to unlock maximum appreciation and secure robust rental returns.
+              </p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
+              <h3 class="pillar-title">Regulatory Liaison & Approvals</h3>
+              <p class="pillar-desc">
+                Securing land conversion, zoning approvals, RERA registration, and occupancy certificates directly with Bengaluru regulatory authorities without follow-up hassles.
+              </p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <h3 class="pillar-title">Project Feasibility & Analysis</h3>
+              <p class="pillar-desc">
+                In-depth evaluation of demand-supply dynamics, price trends, competitor benchmarking, financial modeling (IRR, ROI, break-even), and rigorous risk mitigation.
+              </p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+              <h3 class="pillar-title">Legal Documentation & Due Diligence</h3>
+              <p class="pillar-desc">
+                Drafting & vetting of Sale Deeds, JDAs, Lease Deeds, Power of Attorney, complete title deed scrutiny, encumbrance checks, and sub-registrar liaison.
+              </p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-1.5 1.5L16 7l-1.5-1.5M12 9l-2-2-4 4 1.5 1.5L6 14l3 3 1.5-1.5 1.5 1.5 4-4z"/><circle cx="7.5" cy="16.5" r="3.5"/></svg></div>
+              <h3 class="pillar-title">Lease & Rental Management</h3>
+              <p class="pillar-desc">
+                End-to-end commercial leasing for IT parks/coworking hubs, tenant screening, rent collection, and property maintenance ensuring optimized rental yields.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:3rem;" data-aos="fade-up">
+          <a href="services.html" class="btn-primary" style="padding:12px 28px;">Discover All 5 Strategic Verticals &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive EMI & Investment Calculator Section -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Financial Clarity</span>
+          <h2 class="section-title">Plot & Home Loan EMI Estimator</h2>
+          <p class="section-subtitle">
+            Plan your property investment with real-time financial projections for Bengaluru's high-yield plotted townships and apartments.
+          </p>
+        </div>
+
+        <div class="calculator-box" data-aos="zoom-in" data-aos-duration="750">
+          <div class="calc-grid">
+            <div>
+              <div class="calc-range-group">
+                <div class="calc-label-row">
+                  <span>Total Property Value:</span>
+                  <span class="calc-val-badge" id="valAmount">₹50.0 Lakhs</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcAmount" min="2000000" max="25000000" step="100000" value="5000000" />
+              </div>
+
+              <div class="calc-range-group">
+                <div class="calc-label-row">
+                  <span>Down Payment:</span>
+                  <span class="calc-val-badge" id="valDown">₹10.0 Lakhs</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcDown" min="500000" max="10000000" step="100000" value="1000000" />
+              </div>
+
+              <div class="calc-range-group">
+                <div class="calc-label-row">
+                  <span>Loan Tenure (Years):</span>
+                  <span class="calc-val-badge" id="valTenure">20 Years</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcTenure" min="5" max="30" step="1" value="20" />
+              </div>
+
+              <div class="calc-range-group">
+                <div class="calc-label-row">
+                  <span>Annual Interest Rate (%):</span>
+                  <span class="calc-val-badge" id="valRate">8.5%</span>
+                </div>
+                <input type="range" class="calc-slider" id="calcRate" min="6.5" max="14" step="0.1" value="8.5" />
+              </div>
+            </div>
+
+            <div class="calc-result-card" data-tilt>
+              <span style="font-size:0.85rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px;">Estimated Monthly Installment</span>
+              <div class="emi-amount-large" id="calcEmiMonthly">₹34,713/mo</div>
+              <div style="display:flex; justify-content:space-around; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border-subtle);">
+                <div>
+                  <div style="font-size:0.75rem; color:var(--text-dim);">Principal Loan</div>
+                  <div style="font-size:1.15rem; font-weight:700; color:#fff;" id="calcPrincipalTotal">₹40.00 L</div>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem; color:var(--text-dim);">Total Interest</div>
+                  <div style="font-size:1.15rem; font-weight:700; color:var(--orange-bright);" id="calcInterestTotal">₹43.31 L</div>
+                </div>
+              </div>
+              <button class="btn-primary" data-open-modal="visit" data-project-name="Loan Eligibility Consultation" style="margin-top:2rem; width:100%;">
+                Get Bank Loan Pre-Approval &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Testimonials Section -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Client Testimonials</span>
+          <h2 class="section-title">What Our Buyers Say</h2>
+          <p class="section-subtitle">
+            Authentic experiences from plot investors and homeowners who chose Aspire Housing for transparency and disciplined execution.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card" data-tilt>
+              <div>
+                <div class="testimonial-stars" style="display:flex; gap:3px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 style="color:#fff; font-size:1.1rem; margin:0.8rem 0 0.6rem;">Awesome Experience</h4>
+                <p class="testimonial-quote">
+                  "The site purchase was smooth with assistance from Aspire Housing. The project was well explained and the rate was finalised at the site location. Overall the experience was good."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">NR</div>
+                <div>
+                  <div class="author-name">Narayan Rao</div>
+                  <div class="author-role">Plotted Land Investor • Surya City</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card" data-tilt>
+              <div>
+                <div class="testimonial-stars" style="display:flex; gap:3px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 style="color:#fff; font-size:1.1rem; margin:0.8rem 0 0.6rem;">Extremely Happy</h4>
+                <p class="testimonial-quote">
+                  "Extremely happy we approached Aspire Housing to purchase a plot. Delighted with the services of the staff. Very polite and professional in all interaction and dealing. The whole process of dealing, documentation and communication has been very disciplined and smooth."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">NK</div>
+                <div>
+                  <div class="author-name">Narendra Kumar</div>
+                  <div class="author-role">Villa Plot Owner • AP Township</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card" data-tilt>
+              <div>
+                <div class="testimonial-stars" style="display:flex; gap:3px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FFB800" stroke="#FFB800" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 style="color:#fff; font-size:1.1rem; margin:0.8rem 0 0.6rem;">Transparent Documentation</h4>
+                <p class="testimonial-quote">
+                  "The legal due diligence and STRRPA verification provided by the Aspire team gave us total peace of mind. Getting Electronic A-Khata without any middleman hassle is unheard of in Bangalore real estate."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">SK</div>
+                <div>
+                  <div class="author-name">Suresh Krishnan</div>
+                  <div class="author-role">Homebuyer • Devanahalli Corridor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Build Together CTA -->
+    <section class="section" style="border-top:1px solid var(--border-subtle);">
+      <div class="section-container" style="text-align:center;" data-aos="zoom-in">
+        <span class="section-tag">Let’s Build Together</span>
+        <h2 class="section-title" style="max-width:700px; margin:0 auto 1.5rem;">
+          Ready to Secure Your Piece of Bengaluru’s Next Growth Story?
+        </h2>
+        <p style="color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem; font-size:1.05rem;">
+          Whether you seek government-backed plots in KHB Surya City, airport proximity in Nandi Urban City, or luxury high-rise living in Neo Town, we guide every milestone with integrity.
+        </p>
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="General Inquiry" style="padding:14px 34px; font-size:1rem;">
+            Schedule Site Visit Today &rarr;
+          </button>
+          <a href="contact.html" class="btn-secondary" style="padding:14px 30px;">
+            Visit Corporate Office
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 70905 32343</span>
+            </a>
+            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

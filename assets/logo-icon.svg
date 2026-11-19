@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iconSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="100%" stop-color="#E53900" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="80" r="50" fill="url(#iconSunGrad)" />
+  <polygon points="100,16 122,66 100,56 78,66" fill="#0D0E12" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round" />
+  <polygon points="100,42 136,92 100,80 64,92" fill="#0D0E12" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round" />
+  <polygon points="100,64 154,118 100,104 46,118" fill="#0D0E12" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" />
+  <line x1="100" y1="16" x2="100" y2="104" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+</svg>

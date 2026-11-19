@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandi Urban City Devanahalli | ASPIRE HOUSING — Airport Corridor Plotted Community</title>
+  <meta name="description" content="Nandi Urban City Devanahalli - 12-Acre BIAAPA-approved plotted community 10 minutes from Kempegowda International Airport and surrounded by Nandi Hills.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger active">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link ">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+917090532343" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 70905 32343</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link ">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link ">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link ">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+    </div>
+  </div>
+  
+
+  <main style="padding-top:76px;">
+    <!-- Project Hero Header Banner -->
+    <section class="project-detail-hero">
+      <div class="project-detail-hero-bg">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=85" alt="Nandi Urban City Devanahalli Landscape" />
+      </div>
+      <div class="project-detail-hero-overlay"></div>
+
+      <div class="project-detail-hero-content">
+        <div class="breadcrumbs-nav" data-aos="fade-down">
+          <a href="index.html">Home</a> <span>/</span>
+          <a href="projects.html">Projects</a> <span>/</span>
+          <span style="color:#fff;">Nandi Urban City Devanahalli</span>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
+          <span class="project-badge-tag badge-pulse">BIAAPA Approved • 10 Mins to Airport</span>
+          <span class="project-price-tag">Exclusive Launch Pricing</span>
+        </div>
+
+        <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">
+          Nandi Urban City – Craft Your Dream Home
+        </h1>
+        <p class="section-subtitle" style="max-width:850px; font-size:1.15rem;" data-aos="fade-up" data-aos-delay="300">
+          Own Your Luxury Villa Plot in Devanahalli — Premium 12-Acre Community Near Kempegowda International Airport @ <strong>Exclusive Launch Pricing!</strong> Invest in North Bengaluru’s Most Promising Growth Destination.
+        </p>
+
+        <div style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;" data-aos="fade-up" data-aos-delay="400">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="padding:14px 32px; font-size:1rem;">
+            Schedule a Site Visit &rarr;
+          </button>
+          <a href="#highlights" class="btn-secondary" style="padding:14px 28px; font-size:1rem;">
+            View 147 Villa Plots
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview & Planning -->
+    <section class="section">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-7" data-aos="fade-right">
+            <span class="section-tag">Where Planning Meets Possibility</span>
+            <h2 style="font-size:2.2rem; font-weight:800; color:#fff; margin-bottom:1.25rem;">
+              North Bengaluru's Foremost Plotted Sanctuary
+            </h2>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+              At Nandi Urban City, thoughtful planning meets modern convenience. Spread across <strong>12 acres</strong>, this <strong>BIAAPA-approved</strong> plotted development is designed to maximize open spaces with <strong>7 beautifully landscaped parks</strong>, wide RCC internal roads, and advanced underground infrastructure (UGD & STP).
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1rem;">
+              Located in Devanahalli — the heart of New Bengaluru, the project benefits from rapid growth driven by major <strong>KIADB developments spanning over 15,000 acres</strong>. With Kempegowda International Airport just 10 minutes away, and seamless connectivity to National Highways and the Satellite Town Ring Road (STRR), residents enjoy unmatched accessibility.
+            </p>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.8;">
+              Its well-demarcated villa plots provide a safe, organized, and future-ready living environment surrounded by scenic views of Nandi Hills.
+            </p>
+          </div>
+
+          <div class="col-5" data-aos="fade-left">
+            <div class="glass-card" id="highlights" data-tilt style="border:1px solid var(--orange-border); background:rgba(18,21,30,0.95);">
+              <h3 style="font-size:1.35rem; font-weight:800; color:#fff; margin-bottom:1.2rem;">Project Highlights</h3>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.95rem; color:var(--text-muted); font-size:0.95rem;">
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Plotted Extent:</span> <strong style="color:#fff;">12 Acres Gated</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Total Villa Plots:</span> <strong style="color:#fff;">147 Well-Demarcated Sites</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Luxury Villa Plots:</span> <strong style="color:#fff;">1,200 – 2,400 sq.ft</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Mansion Plots:</span> <strong style="color:#fff;">3,000+ sq.ft</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                  <span>Standard Dimensions:</span> <strong style="color:#fff;">30' x 40' & 40' x 60'</strong>
+                </li>
+                <li style="display:flex; justify-content:space-between; padding-top:4px;">
+                  <span>Parks & Greens:</span> <strong style="color:var(--orange-bright);">7 Landscaped Theme Parks</strong>
+                </li>
+              </ul>
+              <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Plot Selection" style="width:100%; margin-top:1.8rem; padding:12px;">
+                Request Master Plan & Availability
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Enriched Lifestyle</span>
+          <h2 class="section-title">Amenities That Add New Dimensions To Fine-Living</h2>
+          <p class="section-subtitle">Crafted for wellness, recreation, and community living under clean North Bengaluru skies.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M4 17a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4"/><path d="M6 21v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+              <h3 class="pillar-title">Meditation Zone</h3>
+              <p class="pillar-desc">A calm, quiet corner created to help residents unwind, reflect, and rejuvenate amidst native trees and soothing water elements.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5L8.5 11l4-2.5 3 4.5h3"/><path d="m12 17.5-3.5-3.5"/></svg></div>
+              <h3 class="pillar-title">Cycling Track</h3>
+              <p class="pillar-desc">A dedicated, traffic-free track that encourages daily fitness, leisure morning rides, and an active outdoor lifestyle.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9v6"/><path d="M22 9v6"/><line x1="6" y1="12" x2="18" y2="12"/></svg></div>
+              <h3 class="pillar-title">Outdoor Gym</h3>
+              <p class="pillar-desc">A well-equipped open-air fitness space supporting calisthenics, cross-training, and healthy living for residents.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"/></svg></div>
+              <h3 class="pillar-title">Senior Citizen Heaven</h3>
+              <p class="pillar-desc">A peaceful haven with comfortable reflexology pathways, shaded gazebos, and greenery, perfect for relaxation and socializing.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 12h5l-3 7h12l-3-7h5L12 2z"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
+              <h3 class="pillar-title">Garden with Sit-outs</h3>
+              <p class="pillar-desc">Beautifully landscaped gardens with cosy seating areas for precious family time, stargazing, and evening relaxation.</p>
+            </div>
+          </div>
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+              <h3 class="pillar-title">Kids Play Area</h3>
+              <p class="pillar-desc">A safe, vibrant zone designed for children to explore, play, build motor skills, and make lifelong childhood friends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Advantages -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Devanahalli Growth Corridor</span>
+          <h2 class="section-title">Live At The Center of Bengaluru's Fastest-Growing Corridor</h2>
+          <p class="section-subtitle">A 12-acre plotted development designed with wide roads, parks, and future-ready infrastructure with unmatched connectivity.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-6" data-aos="fade-right">
+            <div class="glass-card" data-tilt style="height:100%;">
+              <h3 style="color:#fff; font-size:1.35rem; font-weight:700; margin-bottom:1.2rem;">High-Growth Economic Triggers</h3>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:1.2rem; color:var(--text-muted); font-size:0.95rem;">
+                <li style="display:flex; gap:12px; align-items:flex-start;">
+                  <span style="color:var(--orange);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.8-.2-1.6.2-2 1-.3.7-.1 1.6.5 2.1l5 4-2.8 2.8-2.2-.6c-.5-.1-1 .1-1.3.5-.3.4-.3 1 0 1.4l2.1 2.1 2.1 2.1c.4.3 1 .3 1.4 0 .4-.3.6-.8.5-1.3l-.6-2.2 2.8-2.8 4 5c.5.6 1.4.8 2.1.5.8-.4 1.2-1.2 1-2z"/></svg></span>
+                  <div><strong>Kempegowda International Airport (BLR):</strong> Just 10 minutes away via signal-free expressway.</div>
+                </li>
+                <li style="display:flex; gap:12px; align-items:flex-start;">
+                  <span style="color:var(--orange);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></span>
+                  <div><strong>KIADB Aerospace & IT Park:</strong> Over 15,000 acres powering thousands of high-tech jobs.</div>
+                </li>
+                <li style="display:flex; gap:12px; align-items:flex-start;">
+                  <span style="color:var(--orange);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19L9 5"/><path d="M20 19L15 5"/><line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="13" x2="12" y2="15"/></svg></span>
+                  <div><strong>Satellite Town Ring Road (STRR):</strong> Seamless connectivity to Hoskote, Whitefield, and Tumkur.</div>
+                </li>
+                <li style="display:flex; gap:12px; align-items:flex-start;">
+                  <span style="color:var(--orange);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-3 3"/><path d="M16 19l3 3"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg></span>
+                  <div><strong>Upcoming Airport Metro:</strong> Fast transit linking Devanahalli directly to Central Bengaluru.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="height:100%; display:flex; flex-direction:column; justify-content:center; text-align:center; border:1px solid var(--orange-border);">
+              <span class="section-tag">Pre-Launch Privilege</span>
+              <h3 style="font-size:1.8rem; font-weight:800; color:#fff; margin:0.5rem 0;">Book Exclusive Launch Pricing Today</h3>
+              <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+                Secure early-mover capital gains before the upcoming commercial corridor price revisions.
+              </p>
+              <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="padding:14px 28px;">
+                Lock Launch Pricing & Plot Selection &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 70905 32343</span>
+            </a>
+            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
