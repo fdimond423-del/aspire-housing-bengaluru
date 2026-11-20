@@ -21,7 +21,7 @@ const khbHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85" alt="KHB Surya City Phase 4 Mega Township Plotted Layout" />
+        <img src="assets/images/khb-suryacity-plot.jpg" alt="KHB Surya City Phase 4 Mega Township Plotted Layout" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -202,6 +202,39 @@ const khbHtml = `<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- Master Plan & On-Ground Development Showcase -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Layout Engineering & Ground Reality</span>
+          <h2 class="section-title">Authentic Layout Avenues & Approved Master Plan</h2>
+          <p class="section-subtitle">
+            Demarcated plots with asphalt black-top roads, boundary stones, curb stones, underground electrical lines, and government-approved infrastructure.
+          </p>
+        </div>
+        <div class="bento-grid">
+          <div class="col-6" data-aos="fade-right">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="assets/images/plot-layout-avenue.jpg" alt="KHB Surya City Plotted Layout Internal Roads & Avenues" style="width:100%; height:380px; object-fit:cover;" />
+              <div style="padding:1.25rem;">
+                <div style="font-weight:700; color:#fff;">Wide Asphalt Avenues & Tree-Lined Medians</div>
+                <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Asphalt road, curb stones, and avenue plantation on-site</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="assets/images/plotting-master-plan.jpg" alt="Approved Engineering Master Plan" style="width:100%; height:380px; object-fit:cover;" />
+              <div style="padding:1.25rem;">
+                <div style="font-weight:700; color:#fff;">STRRPA & KHB Approved Master Layout Plan</div>
+                <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Plot demarcations, commercial zones, and civic amenities</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Location Connectivity -->
     <section class="section">
       <div class="section-container">
@@ -265,7 +298,7 @@ const nandiHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1920&q=85" alt="Nandi Urban City Devanahalli Villa Plots Landscape" />
+        <img src="assets/images/nandi-urban-plot.jpg" alt="Nandi Urban City Devanahalli Villa Plots Landscape" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -402,6 +435,37 @@ const nandiHtml = `<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- On-Ground Infrastructure & Demarcated Plots -->
+    <section class="section" style="background:var(--bg-pitch);">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-6" data-aos="fade-right">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="assets/images/plot-layout-avenue.jpg" alt="Nandi Urban City On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-left">
+            <span class="section-tag">Ground Reality</span>
+            <h2 style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:1.2rem;">Ready-To-Construct Demarcated Villa Sites</h2>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.7; margin-bottom:1.5rem;">
+              Every plot at Nandi Urban City comes fully demarcated with precision boundary corner stones, concrete curbs, and wide asphalt internal roads. Complete with underground cabling, water lines, and 7 manicured parks ready for immediate villa construction.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>100% Clear Title & Individual BIAAPA E-Khata</strong>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>30ft & 40ft Wide Black-Top Avenues with Streetlights</strong>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>Bank Loan Pre-Approved by SBI, HDFC & ICICI</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Location Advantages -->
     <section class="section">
       <div class="section-container">
@@ -475,7 +539,7 @@ const apHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1920&q=85" alt="AP Township Gated Plotted Community" />
+        <img src="assets/images/ap-township-plot.jpg" alt="AP Township Gated Plotted Community" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -612,6 +676,37 @@ const apHtml = `<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- On-Ground Infrastructure & Demarcated Plots -->
+    <section class="section" style="background:var(--bg-pitch);">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-6" data-aos="fade-right">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="assets/images/plot-demarcation-ground.jpg" alt="AP Township On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-left">
+            <span class="section-tag">Ground Reality</span>
+            <h2 style="font-size:2rem; font-weight:800; color:#fff; margin-bottom:1.2rem;">Ready-To-Construct Demarcated Villa Sites</h2>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.7; margin-bottom:1.5rem;">
+              Every plot at AP Township comes fully demarcated with precision boundary corner stones, concrete curbs, and wide asphalt internal roads. Complete with underground drainage lines and individual water connection pipes ready for immediate construction.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>100% Clear Title & Individual BMRDA E-Khata</strong>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>30ft & 40ft Wide Tarred Internal Road Network</strong>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; color:#fff;">
+                <span style="color:#10b981;">&#10003;</span> <strong>Bank Loan Pre-Approved by SBI, HDFC & ICICI</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Location Advantages -->
     <section class="section">
       <div class="section-container">
@@ -674,7 +769,7 @@ const habulusHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=85" alt="Habulus Tranquil 5-Acre Residential Campus" />
+        <img src="assets/images/habulus-tranquil.jpg" alt="Habulus Tranquil 5-Acre Residential Campus" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 

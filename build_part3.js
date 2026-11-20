@@ -73,7 +73,7 @@ const servicesHtml = `<!DOCTYPE html>
         <div class="bento-grid" style="align-items:center;">
           <div class="col-6" data-aos="fade-right">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Project Feasibility & Land Valuation Analysis" style="width:100%; height:450px; object-fit:cover;" />
+              <img src="assets/images/plotting-infrastructure.jpg" alt="Project Feasibility & Land Valuation Analysis" style="width:100%; height:450px; object-fit:cover;" />
             </div>
           </div>
           <div class="col-6" data-aos="fade-left">
@@ -460,7 +460,7 @@ const contactHtml = `<!DOCTYPE html>
             </a>
           </div>
           <div style="height:350px; background:#0b0d14; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
-            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80" alt="Bangalore City Map Overview" style="width:100%; height:100%; object-fit:cover; opacity:0.35;" />
+            <img src="assets/images/hero-plotting-main.jpg" alt="Bangalore Prime Corridor" style="width:100%; height:100%; object-fit:cover; opacity:0.35;" />
             <div style="position:absolute; background:rgba(8,10,15,0.88); backdrop-filter:blur(12px); padding:1.8rem 2.4rem; border-radius:18px; border:1px solid var(--orange-border); text-align:center;">
               <div style="color:var(--orange-bright); margin-bottom:0.6rem; display:flex; justify-content:center;">${icons.building}</div>
               <div style="font-size:1.2rem; font-weight:800; color:#fff;">ASPIRE HOUSING CORPORATE HQ</div>
