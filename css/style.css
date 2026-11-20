@@ -15,16 +15,16 @@
   --bg-glass: rgba(12, 15, 22, 0.82);
   --bg-glass-strong: rgba(8, 10, 15, 0.94);
 
-  /* Brand Accents - Aspire Solar Ember & Electric Orange */
-  --orange: #ff5722;
-  --orange-bright: #ff6d00;
-  --orange-light: #ff8a50;
-  --orange-dark: #e64a19;
-  --orange-soft: rgba(255, 87, 34, 0.12);
-  --orange-border: rgba(255, 87, 34, 0.35);
-  --orange-glow: 0 0 32px rgba(255, 87, 34, 0.45);
-  --orange-gradient: linear-gradient(135deg, #ff6d00 0%, #ff3d00 100%);
-  --orange-radial: radial-gradient(circle, rgba(255, 109, 0, 0.25) 0%, rgba(5, 6, 8, 0) 70%);
+  /* Brand Accents - Aspire Solar Ember & Lighter Golden Saffron */
+  --orange: #ff851b;
+  --orange-bright: #ffa034;
+  --orange-light: #ffb86c;
+  --orange-dark: #f06c00;
+  --orange-soft: rgba(255, 140, 40, 0.12);
+  --orange-border: rgba(255, 150, 50, 0.32);
+  --orange-glow: 0 0 32px rgba(255, 140, 40, 0.4);
+  --orange-gradient: linear-gradient(135deg, #ffa034 0%, #ff7718 100%);
+  --orange-radial: radial-gradient(circle, rgba(255, 150, 50, 0.22) 0%, rgba(5, 6, 8, 0) 70%);
 
   /* Secondary Accents */
   --gold-warm: #f59e0b;
@@ -643,17 +643,17 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1px;
+  font-size: clamp(1.95rem, 3.6vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
   color: var(--text-pure);
-  max-width: 860px;
+  max-width: 820px;
   margin-bottom: 1.25rem;
 }
 
 .hero-title .highlight {
-  background: linear-gradient(135deg, #ffffff 30%, #ff8a50 70%, #ff5722 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #ffb86c 70%, #ff851b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

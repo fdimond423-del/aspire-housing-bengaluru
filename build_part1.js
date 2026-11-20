@@ -21,7 +21,7 @@ const indexHtml = `<!DOCTYPE html>
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-bg-media">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Aspire Housing Luxury Real Estate" class="hero-bg-img" />
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85" alt="Aspire Housing Premier Plotted Townships" class="hero-bg-img" />
         <div class="hero-bg-overlay"></div>
       </div>
 
@@ -81,11 +81,11 @@ const indexHtml = `<!DOCTYPE html>
 
             <!-- Main Showcase Image Card -->
             <div class="hero-visual-card" data-tilt>
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85" alt="Aspire Housing Prime Villa Estates" class="hero-visual-img" />
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85" alt="Aspire Housing Demarcated Villa Plots & Townships" class="hero-visual-img" />
               <div class="hero-visual-gradient"></div>
               <div class="hero-visual-content">
-                <span class="hero-visual-tag">Featured Master Development</span>
-                <div class="hero-visual-title">Luxury Villa Living & Strategic Plotted Land</div>
+                <span class="hero-visual-tag">Featured Plotted Township</span>
+                <div class="hero-visual-title">Demarcated Villa Plots & Strategic Plotted Land</div>
                 <div class="hero-visual-desc">Electronic A-Khata • Zero Lease Period • Cauvery Water Guaranteed</div>
               </div>
             </div>
@@ -137,7 +137,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="KHB Surya City Phase 4" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
                 <span class="project-badge-tag">Government Backed • KHB</span>
                 <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
               </div>
@@ -178,7 +178,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Nandi Urban City Devanahalli" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
                 <span class="project-badge-tag">Airport Corridor • BIAAPA</span>
                 <span class="project-price-tag">Exclusive Launch Pricing</span>
               </div>
@@ -219,7 +219,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80" alt="AP Township" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1200&q=80" alt="AP Township Gated Plotted Community" class="project-card-img" />
                 <span class="project-badge-tag">RERA & BMRDA Approved</span>
                 <span class="project-price-tag">High Growth Corridor</span>
               </div>
@@ -260,7 +260,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Habulus Tranquil Apartments" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
                 <span class="project-badge-tag">Neo Town High-Rise</span>
                 <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
               </div>
@@ -588,7 +588,7 @@ const aboutHtml = `<!DOCTYPE html>
 
           <div class="col-5" data-aos="fade-left">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Aspire Housing Architecture" style="width:100%; height:440px; object-fit:cover;" />
+              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" alt="Aspire Housing Land Banking & Township Development" style="width:100%; height:440px; object-fit:cover;" />
               <div style="padding:1.5rem; background:rgba(12,15,22,0.95);">
                 <div style="font-size:1.2rem; font-weight:800; color:#fff;">Formidable Industry Force</div>
                 <p style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Deploying bespoke tools & technology across all business lines</p>
@@ -750,7 +750,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="mega ecity" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="KHB Surya City Phase 4" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
                 <span class="project-badge-tag">Government Backed • KHB</span>
                 <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
               </div>
@@ -780,7 +780,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="airport" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Nandi Urban City Devanahalli" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
                 <span class="project-badge-tag">BIAAPA Approved</span>
                 <span class="project-price-tag">Exclusive Launch Pricing</span>
               </div>
@@ -810,7 +810,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="ecity" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80" alt="AP Township" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1200&q=80" alt="AP Township Gated Plotted Community" class="project-card-img" />
                 <span class="project-badge-tag">BMRDA & RERA Approved</span>
                 <span class="project-price-tag">500 Premium Plots</span>
               </div>
@@ -840,7 +840,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="apartments ecity" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Habulus Tranquil Apartments" class="project-card-img" />
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
                 <span class="project-badge-tag">RERA & BDA Approved</span>
                 <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
               </div>

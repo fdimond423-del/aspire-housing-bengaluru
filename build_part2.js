@@ -21,7 +21,7 @@ const khbHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=85" alt="KHB Surya City Phase 4 Aerial Layout" />
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85" alt="KHB Surya City Phase 4 Mega Township Plotted Layout" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -265,7 +265,7 @@ const nandiHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=85" alt="Nandi Urban City Devanahalli Landscape" />
+        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1920&q=85" alt="Nandi Urban City Devanahalli Villa Plots Landscape" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -475,7 +475,7 @@ const apHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1920&q=85" alt="AP Township Gated Community" />
+        <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1920&q=85" alt="AP Township Gated Plotted Community" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -674,7 +674,7 @@ const habulusHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=85" alt="Habulus Tranquil Luxury Towers" />
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=85" alt="Habulus Tranquil 5-Acre Residential Campus" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
