@@ -149,7 +149,7 @@ function initLogoIntro() {
     preloader.classList.add('hide');
     setTimeout(() => {
       preloader.style.display = 'none';
-    }, 700);
+    }, 800);
   }
 
   // If already seen on this session and user is on an inner page, skip instantly
@@ -162,7 +162,7 @@ function initLogoIntro() {
   setTimeout(() => {
     dismissIntro(false);
     sessionStorage.setItem('aspire_intro_seen', 'true');
-  }, 1800);
+  }, 2300);
 }
 
 /* ==========================================================================
