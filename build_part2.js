@@ -32,11 +32,6 @@ const khbHtml = `<!DOCTYPE html>
           <span style="color:#fff;">KHB Surya City Phase-4</span>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
-          <span class="project-badge-tag badge-pulse">Government Backed • Karnataka Housing Board</span>
-          <span class="project-price-tag">Plots from ₹46.80* Lakh (₹3900/sq.ft*)</span>
-        </div>
-
         <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">
           Asia’s Biggest Residential Township — KHB Surya City Phase-4
         </h1>
@@ -281,11 +276,6 @@ const nandiHtml = `<!DOCTYPE html>
           <span style="color:#fff;">Nandi Urban City Devanahalli</span>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
-          <span class="project-badge-tag badge-pulse">BIAAPA Approved • 10 Mins to Airport</span>
-          <span class="project-price-tag">Exclusive Launch Pricing</span>
-        </div>
-
         <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">
           Nandi Urban City – Craft Your Dream Home
         </h1>
@@ -496,11 +486,6 @@ const apHtml = `<!DOCTYPE html>
           <span style="color:#fff;">AP Township</span>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
-          <span class="project-badge-tag badge-pulse">BMRDA & RERA Approved</span>
-          <span class="project-price-tag">Project RERA # PRM/KA/RERA/1251/308/PR/220118/004642</span>
-        </div>
-
         <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">
           AP Township – Live Where Comfort Meets Everyday Luxury
         </h1>
@@ -698,11 +683,6 @@ const habulusHtml = `<!DOCTYPE html>
           <a href="index.html">Home</a> <span>/</span>
           <a href="projects.html">Projects</a> <span>/</span>
           <span style="color:#fff;">Habulus Tranquil</span>
-        </div>
-
-        <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;" data-aos="fade-down" data-aos-delay="100">
-          <span class="project-badge-tag badge-pulse">Neo Town • Next to Electronic City • Land Owner Share</span>
-          <span class="project-price-tag">₹90L Onwards • 2, 2.5 & 3 BHK</span>
         </div>
 
         <h1 class="section-title" style="font-size:clamp(2.4rem, 5vw, 3.8rem); max-width:960px;" data-aos="fade-up" data-aos-delay="200">

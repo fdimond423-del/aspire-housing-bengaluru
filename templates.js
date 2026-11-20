@@ -35,7 +35,6 @@ function getHeader(activePage = 'home') {
         <div class="intro-loading-progress"></div>
       </div>
     </div>
-    <button id="skipIntroBtn" class="intro-skip-btn">Skip Intro &rarr;</button>
   </div>
   ` : '';
 

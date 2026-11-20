@@ -135,8 +135,6 @@ function initInteractiveTabs() {
    ========================================================================== */
 function initLogoIntro() {
   const preloader = document.getElementById('logoIntroPreloader');
-  const skipBtn = document.getElementById('skipIntroBtn');
-
   if (!preloader) return;
 
   const path = window.location.pathname;
@@ -151,7 +149,7 @@ function initLogoIntro() {
     preloader.classList.add('hide');
     setTimeout(() => {
       preloader.style.display = 'none';
-    }, 850);
+    }, 700);
   }
 
   // If already seen on this session and user is on an inner page, skip instantly
@@ -160,19 +158,11 @@ function initLogoIntro() {
     return;
   }
 
-  // Play full animated intro on Home or first visit
-  const introTimer = setTimeout(() => {
+  // Pure Logo Animation - automatically reveals site smoothly without any button
+  setTimeout(() => {
     dismissIntro(false);
     sessionStorage.setItem('aspire_intro_seen', 'true');
-  }, 2200);
-
-  if (skipBtn) {
-    skipBtn.addEventListener('click', () => {
-      clearTimeout(introTimer);
-      dismissIntro(false);
-      sessionStorage.setItem('aspire_intro_seen', 'true');
-    });
-  }
+  }, 1800);
 }
 
 /* ==========================================================================
