@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initEmiCalculator();
   initModalScheduler();
+  initPlanLightbox();
   initPropertyFilter();
   initScrollAnimations();
   initAOS();
@@ -542,4 +543,41 @@ function initScrollAnimations() {
   }, { threshold: 0.15 });
 
   fadeElements.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   9. HIGH-RESOLUTION BLUEPRINT & PLAN LIGHTBOX MODAL
+   ========================================================================== */
+function initPlanLightbox() {
+  const modal = document.getElementById('planLightboxModal');
+  const img = document.getElementById('lightboxImg');
+  const caption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('closeLightboxBtn');
+  if (!modal || !img) return;
+
+  document.querySelectorAll('[data-zoomable]').forEach(el => {
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', () => {
+      const src = el.getAttribute('data-zoomable') || el.getAttribute('src');
+      const text = el.getAttribute('data-caption') || el.getAttribute('alt') || 'High Resolution View';
+      img.src = src;
+      caption.textContent = text;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    modal.classList.remove('open');
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeLightbox();
+  });
 }

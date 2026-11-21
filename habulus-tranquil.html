@@ -424,6 +424,15 @@
     </div>
   </div>
 
+  <!-- High Resolution Lightbox Modal for Blueprints & Plans -->
+  <div class="modal-overlay" id="planLightboxModal">
+    <div style="position:relative; max-width:96vw; max-height:92vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <button class="modal-close-btn" id="closeLightboxBtn" style="position:absolute; top:-16px; right:-16px; z-index:20; background:var(--orange); color:#000; font-weight:800; font-size:1.4rem;">&times;</button>
+      <img id="lightboxImg" src="" alt="Plan Enlargement" style="max-width:94vw; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid rgba(255,255,255,0.15); box-shadow:0 20px 60px rgba(0,0,0,0.9); background:#0a0c12;" />
+      <div id="lightboxCaption" style="color:#fff; font-size:0.95rem; font-weight:600; margin-top:0.8rem; text-align:center; background:rgba(18,21,30,0.85); padding:6px 18px; border-radius:30px; border:1px solid rgba(255,255,255,0.1);"></div>
+    </div>
+  </div>
+
   <!-- AOS Animation Script (High-speed CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- Core Interaction Script -->
