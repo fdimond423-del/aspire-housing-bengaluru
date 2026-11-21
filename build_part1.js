@@ -183,7 +183,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/khb-suryacity-plot.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
+                <img src="assets/images/user-plot-ground-real.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
                 <span class="project-badge-tag">Government Backed • KHB</span>
                 <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
               </div>
@@ -224,7 +224,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/nandi-urban-plot.jpg" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
+                <img src="assets/images/user-plot-gated-aerial.png" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
                 <span class="project-badge-tag">Airport Corridor • BIAAPA</span>
                 <span class="project-price-tag">Exclusive Launch Pricing</span>
               </div>
@@ -265,7 +265,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/ap-township-plot.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
+                <img src="assets/images/user-plot-master-plan-72.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
                 <span class="project-badge-tag">RERA & BMRDA Approved</span>
                 <span class="project-price-tag">High Growth Corridor</span>
               </div>
@@ -306,7 +306,7 @@ const indexHtml = `<!DOCTYPE html>
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/habulus-tranquil.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
+                <img src="assets/images/user-plot-park-layout.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
                 <span class="project-badge-tag">Neo Town High-Rise</span>
                 <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
               </div>
@@ -827,7 +827,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="mega ecity" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/khb-suryacity-plot.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
+                <img src="assets/images/user-plot-ground-real.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
                 <span class="project-badge-tag">Government Backed • KHB</span>
                 <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
               </div>
@@ -857,7 +857,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="airport" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/nandi-urban-plot.jpg" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
+                <img src="assets/images/user-plot-gated-aerial.png" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
                 <span class="project-badge-tag">BIAAPA Approved</span>
                 <span class="project-price-tag">Exclusive Launch Pricing</span>
               </div>
@@ -887,7 +887,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="ecity" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/ap-township-plot.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
+                <img src="assets/images/user-plot-master-plan-72.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
                 <span class="project-badge-tag">BMRDA & RERA Approved</span>
                 <span class="project-price-tag">500 Premium Plots</span>
               </div>
@@ -917,7 +917,7 @@ const projectsHtml = `<!DOCTYPE html>
           <div class="col-6" data-category="apartments ecity" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card" data-tilt>
               <div class="project-card-image-box">
-                <img src="assets/images/habulus-tranquil.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
+                <img src="assets/images/user-plot-park-layout.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
                 <span class="project-badge-tag">RERA & BDA Approved</span>
                 <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
               </div>

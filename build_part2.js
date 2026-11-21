@@ -15,7 +15,7 @@ const amrithaHtml = `<!DOCTYPE html>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  \${getHeader('amritha')}
+  ${getHeader('amritha')}
 
   <main style="padding-top:76px;">
     <!-- Project Hero Header Banner -->
@@ -49,7 +49,7 @@ const amrithaHtml = `<!DOCTYPE html>
             Schedule a Site Visit &rarr;
           </button>
           <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20am%20interested%20in%20Amritha%20Varshini%20plotted%20development%20beside%20Suryacity-3.%20Please%20share%20the%20cost%20sheet%20and%20layout%20plan." target="_blank" class="btn-secondary" style="padding:14px 28px; font-size:1rem; color:#25d366; border-color:rgba(37,211,102,0.4);">
-            \${icons.whatsapp}
+            ${icons.whatsapp}
             <span>WhatsApp Project Desk</span>
           </a>
           <a href="#layout" class="btn-secondary" style="padding:14px 28px; font-size:1rem;">
@@ -147,7 +147,7 @@ const amrithaHtml = `<!DOCTYPE html>
         <div class="bento-grid">
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">\${icons.layers}</div>
+              <div class="pillar-icon-box">${icons.layers}</div>
               <h3 class="pillar-title">1. Exclusive Villa Plots</h3>
               <p class="pillar-desc">
                 For buyers who envision creating a custom family home from the ground up. Standard demarcated dimensions include <strong>30'x40' (1200 sq.ft), 30'x50' (1500 sq.ft), and 40'x60' (2400 sq.ft)</strong>, complete with underground utilities, wide road frontage, and individual BMRDA e-Khata.
@@ -157,7 +157,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">\${icons.building}</div>
+              <div class="pillar-icon-box">${icons.building}</div>
               <h3 class="pillar-title">2. Premium Independent Villas</h3>
               <p class="pillar-desc">
                 Aesthetically crafted <strong>2 BHK, 3 BHK & 4 BHK contemporary architectural villas</strong> built on 30x40, 30x50, and 40x60 plots. Built-up areas range from 1,500 sq.ft to 2,600 sq.ft with functional double-height layouts, private terrace gardens, and covered car porch.
@@ -167,7 +167,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">\${icons.key}</div>
+              <div class="pillar-icon-box">${icons.key}</div>
               <h3 class="pillar-title">3. Luxury Apartments</h3>
               <p class="pillar-desc">
                 For professionals and modern families seeking refined apartment living within a secure 23-acre gated ecosystem. Offering well-ventilated <strong>Studio, 2 & 3 Bedroom residences</strong> with shared clubhouse access, lifts, and reserved parking.
@@ -177,7 +177,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="400">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">\${icons.commercial}</div>
+              <div class="pillar-icon-box">${icons.commercial}</div>
               <h3 class="pillar-title">4. Commercial High-Street Plots</h3>
               <p class="pillar-desc">
                 A limited selection of commercial plots fronting the <strong>100-foot wide main road</strong>, ranging from 2,400 to 4,000 sq.ft. Perfectly zoned for supermarkets, clinics, banking branches, and daily convenience shopping serving over 1,500 nearby families.
@@ -283,7 +283,7 @@ const amrithaHtml = `<!DOCTYPE html>
               </div>
               <div style="margin-top:1.2rem; display:flex; gap:0.75rem;">
                 <button class="btn-primary" data-open-modal="visit" data-project-name="Amritha Varshini Plot Selection" style="flex:1; padding:10px; font-size:0.88rem;">Check Live Availability &rarr;</button>
-                <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20send%20me%20the%20cost%20sheet%20and%20plot%20availability%20chart%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="padding:10px 16px; font-size:0.88rem; color:#25d366; border-color:rgba(37,211,102,0.4);">\${icons.whatsapp} WhatsApp</a>
+                <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20send%20me%20the%20cost%20sheet%20and%20plot%20availability%20chart%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="padding:10px 16px; font-size:0.88rem; color:#25d366; border-color:rgba(37,211,102,0.4);">${icons.whatsapp} WhatsApp</a>
               </div>
             </div>
           </div>
@@ -409,7 +409,7 @@ const amrithaHtml = `<!DOCTYPE html>
         <div class="bento-grid">
           <div class="col-4" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.road}</div>
+              <div class="pillar-icon-box">${icons.road}</div>
               <h3 class="pillar-title">100 Ft Main Arterial Road</h3>
               <p class="pillar-desc">Broad, heavy-duty black-top roadway directly connecting Amritha Varshini to KHB Suryanagar Phase-III and Hosur Highway.</p>
             </div>
@@ -417,7 +417,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.park}</div>
+              <div class="pillar-icon-box">${icons.park}</div>
               <h3 class="pillar-title">6 Landscaped Parks</h3>
               <p class="pillar-desc">Over 6,000+ sqm of landscaped open green spaces including Park-1 (1016 sqm), Park-3 (1299 sqm), and Park-4 (2407 sqm).</p>
             </div>
@@ -425,7 +425,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.building}</div>
+              <div class="pillar-icon-box">${icons.building}</div>
               <h3 class="pillar-title">Clubhouse & Recreation</h3>
               <p class="pillar-desc">Private community clubhouse featuring indoor games room, fitness gymnasium, multipurpose party hall, and children's activity lounge.</p>
             </div>
@@ -433,7 +433,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.eco}</div>
+              <div class="pillar-icon-box">${icons.eco}</div>
               <h3 class="pillar-title">Sewage & Waste Treatment</h3>
               <p class="pillar-desc">State-of-the-art Sewage Treatment Plant (STP) and organic waste converter ensuring eco-conscious sustainability and zero discharge.</p>
             </div>
@@ -441,7 +441,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.water}</div>
+              <div class="pillar-icon-box">${icons.water}</div>
               <h3 class="pillar-title">Rainwater Harvesting</h3>
               <p class="pillar-desc">Comprehensive rainwater harvesting pits across all layout avenues designed to sustainably recharge local groundwater tables.</p>
             </div>
@@ -449,7 +449,7 @@ const amrithaHtml = `<!DOCTYPE html>
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">\${icons.shieldCheck}</div>
+              <div class="pillar-icon-box">${icons.shieldCheck}</div>
               <h3 class="pillar-title">Underground Utilities & Security</h3>
               <p class="pillar-desc">Concealed underground electricity cables, LED street illumination, water supply mains, and 24/7 security with gated entry arch.</p>
             </div>
@@ -516,7 +516,7 @@ const amrithaHtml = `<!DOCTYPE html>
               Book Free Site Inspection Tour &rarr;
             </button>
             <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20would%20like%20to%20schedule%20a%20site%20visit%20for%20Amritha%20Varshini%20Beside%20Suryacity-3." target="_blank" class="btn-secondary" style="padding:14px 30px; font-size:1rem; color:#25d366; border-color:rgba(37,211,102,0.4);">
-              \${icons.whatsapp}
+              ${icons.whatsapp}
               <span>Chat on WhatsApp (+91 99453 80337)</span>
             </a>
           </div>
@@ -525,7 +525,7 @@ const amrithaHtml = `<!DOCTYPE html>
     </section>
   </main>
 
-  \${getFooter()}
+  ${getFooter()}
 </body>
 </html>`;
 
@@ -548,7 +548,7 @@ const khbHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="assets/images/khb-suryacity-plot.jpg" alt="KHB Surya City Phase 4 Mega Township Plotted Layout" />
+        <img src="assets/images/user-plot-master-plan-72.jpg" alt="KHB Surya City Phase 4 Mega Township Plotted Layout" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -742,7 +742,7 @@ const khbHtml = `<!DOCTYPE html>
         <div class="bento-grid">
           <div class="col-6" data-aos="fade-right">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="assets/images/plot-layout-avenue.jpg" alt="KHB Surya City Plotted Layout Internal Roads & Avenues" style="width:100%; height:380px; object-fit:cover;" />
+              <img src="assets/images/user-plot-ground-real.jpg" alt="KHB Surya City Plotted Layout Internal Roads & Avenues" style="width:100%; height:380px; object-fit:cover;" />
               <div style="padding:1.25rem;">
                 <div style="font-weight:700; color:#fff;">Wide Asphalt Avenues & Tree-Lined Medians</div>
                 <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Asphalt road, curb stones, and avenue plantation on-site</div>
@@ -751,7 +751,7 @@ const khbHtml = `<!DOCTYPE html>
           </div>
           <div class="col-6" data-aos="fade-left">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="assets/images/plotting-master-plan.jpg" alt="Approved Engineering Master Plan" style="width:100%; height:380px; object-fit:cover;" />
+              <img src="assets/images/user-plot-park-layout.jpg" alt="Approved Engineering Master Plan" style="width:100%; height:380px; object-fit:cover;" />
               <div style="padding:1.25rem;">
                 <div style="font-weight:700; color:#fff;">STRRPA & KHB Approved Master Layout Plan</div>
                 <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px;">Plot demarcations, commercial zones, and civic amenities</div>
@@ -825,7 +825,7 @@ const nandiHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="assets/images/nandi-urban-plot.jpg" alt="Nandi Urban City Devanahalli Villa Plots Landscape" />
+        <img src="assets/images/user-plot-gated-aerial.png" alt="Nandi Urban City Devanahalli Villa Plots Landscape" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -968,7 +968,7 @@ const nandiHtml = `<!DOCTYPE html>
         <div class="bento-grid" style="align-items:center;">
           <div class="col-6" data-aos="fade-right">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="assets/images/plot-layout-avenue.jpg" alt="Nandi Urban City On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
+              <img src="assets/images/user-plot-overview.png" alt="Nandi Urban City On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
             </div>
           </div>
           <div class="col-6" data-aos="fade-left">
@@ -1066,7 +1066,7 @@ const apHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="assets/images/ap-township-plot.jpg" alt="AP Township Gated Plotted Community" />
+        <img src="assets/images/user-plot-master-plan-72.jpg" alt="AP Township Gated Plotted Community" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 
@@ -1209,7 +1209,7 @@ const apHtml = `<!DOCTYPE html>
         <div class="bento-grid" style="align-items:center;">
           <div class="col-6" data-aos="fade-right">
             <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
-              <img src="assets/images/plot-demarcation-ground.jpg" alt="AP Township On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
+              <img src="assets/images/user-plot-ground-real.jpg" alt="AP Township On-Ground Demarcated Plots and Roads" style="width:100%; height:400px; object-fit:cover;" />
             </div>
           </div>
           <div class="col-6" data-aos="fade-left">
@@ -1296,7 +1296,7 @@ const habulusHtml = `<!DOCTYPE html>
     <!-- Project Hero Header Banner -->
     <section class="project-detail-hero">
       <div class="project-detail-hero-bg">
-        <img src="assets/images/habulus-tranquil.jpg" alt="Habulus Tranquil 5-Acre Residential Campus" />
+        <img src="assets/images/user-plot-park-layout.jpg" alt="Habulus Tranquil 5-Acre Residential Campus" />
       </div>
       <div class="project-detail-hero-overlay"></div>
 

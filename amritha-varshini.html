@@ -10,7 +10,101 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  ${getHeader('amritha')}
+  
+  
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Aspire Housing Home">
+        <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-title">ASPIRE</span>
+          <span class="brand-subtitle">HOUSING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link ">About Us</a>
+        
+        <div class="nav-item-dropdown">
+          <a href="projects.html" class="nav-link dropdown-trigger active">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="projects.html" class="dropdown-item">
+              <span class="dropdown-title">All Master Developments</span>
+              <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="amritha-varshini.html" class="dropdown-item">
+              <span class="dropdown-title">Amritha Varshini (New)</span>
+              <span class="dropdown-sub">23-Acre BMRDA Township • 336 Sites & Luxury Villas</span>
+            </a>
+            <a href="khb-suryacity.html" class="dropdown-item">
+              <span class="dropdown-title">KHB Surya City Phase-4</span>
+              <span class="dropdown-sub">2400-Acre Mega Township (₹46.80L+)</span>
+            </a>
+            <a href="nandi-urban-city.html" class="dropdown-item">
+              <span class="dropdown-title">Nandi Urban City</span>
+              <span class="dropdown-sub">12-Acre Plotted Community near Airport</span>
+            </a>
+            <a href="ap-township.html" class="dropdown-item">
+              <span class="dropdown-title">AP Township</span>
+              <span class="dropdown-sub">30-Acre BMRDA & RERA Approved</span>
+            </a>
+            <a href="habulus-tranquil.html" class="dropdown-item">
+              <span class="dropdown-title">Habulus Tranquil</span>
+              <span class="dropdown-sub">2 & 3 BHK Ultra Luxury (₹90L+)</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="nav-link ">Services</a>
+        <a href="careers.html" class="nav-link ">Careers</a>
+        <a href="contact.html" class="nav-link ">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919945380337" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 99453 80337</span>
+        </a>
+        <button class="btn-primary" data-open-modal="visit">
+          <span>Schedule Visit</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+      <span style="font-weight:800; font-size:1.2rem; color:#fff;">ASPIRE HOUSING</span>
+      <button id="mobileDrawerClose" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link ">Home &rarr;</a>
+    <a href="about.html" class="mobile-nav-link ">About Us &rarr;</a>
+    <a href="projects.html" class="mobile-nav-link ">All Projects &rarr;</a>
+    <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="amritha-varshini.html" style="color:var(--orange-bright); text-decoration:none; font-size:0.95rem; font-weight:700;">★ Amritha Varshini (23 Acres BMRDA)</a>
+      <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
+      <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
+      <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
+      <a href="habulus-tranquil.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Habulus Tranquil Luxury</a>
+    </div>
+    <a href="services.html" class="mobile-nav-link ">Strategic Services &rarr;</a>
+    <a href="careers.html" class="mobile-nav-link ">Careers & Culture &rarr;</a>
+    <a href="contact.html" class="mobile-nav-link ">Contact & Office &rarr;</a>
+    <div style="margin-top:2rem;">
+      <a href="tel:+919945380337" class="btn-primary" style="width:100%; text-align:center;">Call +91 99453 80337</a>
+    </div>
+  </div>
+  
 
   <main style="padding-top:76px;">
     <!-- Project Hero Header Banner -->
@@ -44,7 +138,7 @@
             Schedule a Site Visit &rarr;
           </button>
           <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20am%20interested%20in%20Amritha%20Varshini%20plotted%20development%20beside%20Suryacity-3.%20Please%20share%20the%20cost%20sheet%20and%20layout%20plan." target="_blank" class="btn-secondary" style="padding:14px 28px; font-size:1rem; color:#25d366; border-color:rgba(37,211,102,0.4);">
-            ${icons.whatsapp}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             <span>WhatsApp Project Desk</span>
           </a>
           <a href="#layout" class="btn-secondary" style="padding:14px 28px; font-size:1rem;">
@@ -142,7 +236,7 @@
         <div class="bento-grid">
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">${icons.layers}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
               <h3 class="pillar-title">1. Exclusive Villa Plots</h3>
               <p class="pillar-desc">
                 For buyers who envision creating a custom family home from the ground up. Standard demarcated dimensions include <strong>30'x40' (1200 sq.ft), 30'x50' (1500 sq.ft), and 40'x60' (2400 sq.ft)</strong>, complete with underground utilities, wide road frontage, and individual BMRDA e-Khata.
@@ -152,7 +246,7 @@
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">${icons.building}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
               <h3 class="pillar-title">2. Premium Independent Villas</h3>
               <p class="pillar-desc">
                 Aesthetically crafted <strong>2 BHK, 3 BHK & 4 BHK contemporary architectural villas</strong> built on 30x40, 30x50, and 40x60 plots. Built-up areas range from 1,500 sq.ft to 2,600 sq.ft with functional double-height layouts, private terrace gardens, and covered car porch.
@@ -162,7 +256,7 @@
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">${icons.key}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-1.5 1.5L16 7l-1.5-1.5M12 9l-2-2-4 4 1.5 1.5L6 14l3 3 1.5-1.5 1.5 1.5 4-4z"/><circle cx="7.5" cy="16.5" r="3.5"/></svg></div>
               <h3 class="pillar-title">3. Luxury Apartments</h3>
               <p class="pillar-desc">
                 For professionals and modern families seeking refined apartment living within a secure 23-acre gated ecosystem. Offering well-ventilated <strong>Studio, 2 & 3 Bedroom residences</strong> with shared clubhouse access, lifts, and reserved parking.
@@ -172,7 +266,7 @@
 
           <div class="col-6" data-aos="fade-up" data-aos-delay="400">
             <div class="glass-card" data-tilt style="height:100%;">
-              <div class="pillar-icon-box">${icons.commercial}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
               <h3 class="pillar-title">4. Commercial High-Street Plots</h3>
               <p class="pillar-desc">
                 A limited selection of commercial plots fronting the <strong>100-foot wide main road</strong>, ranging from 2,400 to 4,000 sq.ft. Perfectly zoned for supermarkets, clinics, banking branches, and daily convenience shopping serving over 1,500 nearby families.
@@ -278,7 +372,7 @@
               </div>
               <div style="margin-top:1.2rem; display:flex; gap:0.75rem;">
                 <button class="btn-primary" data-open-modal="visit" data-project-name="Amritha Varshini Plot Selection" style="flex:1; padding:10px; font-size:0.88rem;">Check Live Availability &rarr;</button>
-                <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20send%20me%20the%20cost%20sheet%20and%20plot%20availability%20chart%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="padding:10px 16px; font-size:0.88rem; color:#25d366; border-color:rgba(37,211,102,0.4);">${icons.whatsapp} WhatsApp</a>
+                <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20send%20me%20the%20cost%20sheet%20and%20plot%20availability%20chart%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="padding:10px 16px; font-size:0.88rem; color:#25d366; border-color:rgba(37,211,102,0.4);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -404,7 +498,7 @@
         <div class="bento-grid">
           <div class="col-4" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.road}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19L9 5"/><path d="M20 19L15 5"/><line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="13" x2="12" y2="15"/></svg></div>
               <h3 class="pillar-title">100 Ft Main Arterial Road</h3>
               <p class="pillar-desc">Broad, heavy-duty black-top roadway directly connecting Amritha Varshini to KHB Suryanagar Phase-III and Hosur Highway.</p>
             </div>
@@ -412,7 +506,7 @@
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.park}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 12h5l-3 7h12l-3-7h5L12 2z"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
               <h3 class="pillar-title">6 Landscaped Parks</h3>
               <p class="pillar-desc">Over 6,000+ sqm of landscaped open green spaces including Park-1 (1016 sqm), Park-3 (1299 sqm), and Park-4 (2407 sqm).</p>
             </div>
@@ -420,7 +514,7 @@
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.building}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="18" x2="16" y2="18.01"/></svg></div>
               <h3 class="pillar-title">Clubhouse & Recreation</h3>
               <p class="pillar-desc">Private community clubhouse featuring indoor games room, fitness gymnasium, multipurpose party hall, and children's activity lounge.</p>
             </div>
@@ -428,7 +522,7 @@
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="100">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.eco}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 6.5 10.45a1.8 1.8 0 0 1 .006-1.775l4.08-7.054a1.815 1.815 0 0 1 1.57-.896c.64 0 1.228.34 1.565.885l1.6 2.775"/><path d="M18.8 8h-4.6"/><path d="m16.8 6 2 2-2 2"/></svg></div>
               <h3 class="pillar-title">Sewage & Waste Treatment</h3>
               <p class="pillar-desc">State-of-the-art Sewage Treatment Plant (STP) and organic waste converter ensuring eco-conscious sustainability and zero discharge.</p>
             </div>
@@ -436,7 +530,7 @@
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="200">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.water}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
               <h3 class="pillar-title">Rainwater Harvesting</h3>
               <p class="pillar-desc">Comprehensive rainwater harvesting pits across all layout avenues designed to sustainably recharge local groundwater tables.</p>
             </div>
@@ -444,7 +538,7 @@
 
           <div class="col-4" data-aos="fade-up" data-aos-delay="300">
             <div class="glass-card" data-tilt>
-              <div class="pillar-icon-box">${icons.shieldCheck}</div>
+              <div class="pillar-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
               <h3 class="pillar-title">Underground Utilities & Security</h3>
               <p class="pillar-desc">Concealed underground electricity cables, LED street illumination, water supply mains, and 24/7 security with gated entry arch.</p>
             </div>
@@ -511,7 +605,7 @@
               Book Free Site Inspection Tour &rarr;
             </button>
             <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20would%20like%20to%20schedule%20a%20site%20visit%20for%20Amritha%20Varshini%20Beside%20Suryacity-3." target="_blank" class="btn-secondary" style="padding:14px 30px; font-size:1rem; color:#25d366; border-color:rgba(37,211,102,0.4);">
-              ${icons.whatsapp}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>Chat on WhatsApp (+91 99453 80337)</span>
             </a>
           </div>
@@ -520,6 +614,150 @@
     </section>
   </main>
 
-  ${getFooter()}
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo-link" style="margin-bottom:1.2rem;">
+            <img src="assets/logo-icon.svg" alt="Aspire Housing Logo" style="width:40px; height:40px;" />
+            <div class="brand-text-block">
+              <span class="brand-title">ASPIRE</span>
+              <span class="brand-subtitle">HOUSING</span>
+            </div>
+          </a>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; max-width:340px; margin-bottom:1.5rem;">
+            Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="tel:+919945380337" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 99453 80337</span>
+            </a>
+            <a href="https://wa.me/919945380337" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Portfolio</h4>
+          <ul class="footer-links-list">
+            <li><a href="amritha-varshini.html" class="footer-link" style="color:var(--orange-bright); font-weight:600;">★ Amritha Varshini (23-Acre BMRDA)</a></li>
+            <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
+            <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
+            <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
+            <li><a href="habulus-tranquil.html" class="footer-link">Habulus Tranquil Apartments</a></li>
+            <li><a href="projects.html" class="footer-link">All Projects Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About Aspire Housing</a></li>
+            <li><a href="about.html#values" class="footer-link">7 Core Value Pillars</a></li>
+            <li><a href="services.html" class="footer-link">Strategic Advisory Services</a></li>
+            <li><a href="careers.html" class="footer-link">Careers & Culture</a></li>
+            <li><a href="contact.html" class="footer-link">Corporate Office Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Corporate Office</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1rem;">
+            <strong>Aspire Housing Corporate HQ</strong><br>
+            Lakshmi Enclave, #1571, 2nd Floor, East End Main Road, Jayanagar 9th Block, Bangalore – 560069
+          </p>
+          <p style="color:var(--text-dim); font-size:0.82rem;">
+            Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
+            Direct: <a href="tel:+919945380337" style="color:var(--orange);">+91 99453 80337</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ASPIRE HOUSING. All Rights Reserved. Built with bespoke architectural craftsmanship.</div>
+        <div style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">RERA Approvals</a>
+          <a href="contact.html" class="footer-link">Site Map</a>
+        </div>
+      </div>
+
+      <div class="footer-legal-note">
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township), APA/LAO No. 142/2012-13 (Amritha Varshini BMRDA), and STRRPA / BIAAPA sanctions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20plotted%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a href="tel:+919945380337" class="floating-btn phone" title="Call Us Directly">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modal Booking Dialog -->
+  <div class="modal-overlay" id="siteVisitModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div style="margin-bottom:1.5rem;">
+        <span class="section-tag">Direct Developer Access</span>
+        <h3 style="color:#fff; font-size:1.5rem; font-weight:800; margin-top:4px;">Schedule an Exclusive Site Visit</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-top:4px;">Experience the layout, examine original approvals, and inspect infrastructure in person.</p>
+      </div>
+
+      <form id="modalVisitForm">
+        <div class="form-input-group">
+          <label class="form-label">Select Development Project</label>
+          <select id="modalProjectField" class="form-control" style="background:#111520; font-weight:600; color:var(--orange-bright);">
+            <option value="Amritha Varshini (23-Acre BMRDA Layout)">Amritha Varshini (23-Acre BMRDA Layout • Attibele / Suryacity-3)</option>
+            <option value="KHB Surya City Phase-4">KHB Surya City Phase-4 (2,400-Acre Mega Township)</option>
+            <option value="Nandi Urban City Devanahalli">Nandi Urban City (12-Acre BIAAPA near Airport)</option>
+            <option value="AP Township BMRDA">AP Township (30-Acre BMRDA near E-City)</option>
+            <option value="Habulus Tranquil Neo Town">Habulus Tranquil (Ultra-Luxury Apartments)</option>
+          </select>
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Mobile Number (WhatsApp Enabled) *</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-input-group">
+          <label class="form-label">Preferred Date & Message</label>
+          <textarea class="form-control" rows="2" placeholder="Tell us your preferred day/time or specific plot dimensions (e.g. 30x40, 40x60)..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; padding:14px; font-size:1rem; border-radius:12px;">Confirm Site Visit Booking &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- High Resolution Lightbox Modal for Blueprints & Plans -->
+  <div class="modal-overlay" id="planLightboxModal">
+    <div style="position:relative; max-width:96vw; max-height:92vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <button class="modal-close-btn" id="closeLightboxBtn" style="position:absolute; top:-16px; right:-16px; z-index:20; background:var(--orange); color:#000; font-weight:800; font-size:1.4rem;">&times;</button>
+      <img id="lightboxImg" src="" alt="Plan Enlargement" style="max-width:94vw; max-height:82vh; object-fit:contain; border-radius:12px; border:1px solid rgba(255,255,255,0.15); box-shadow:0 20px 60px rgba(0,0,0,0.9); background:#0a0c12;" />
+      <div id="lightboxCaption" style="color:#fff; font-size:0.95rem; font-weight:600; margin-top:0.8rem; text-align:center; background:rgba(18,21,30,0.85); padding:6px 18px; border-radius:30px; border:1px solid rgba(255,255,255,0.1);"></div>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script (High-speed CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Core Interaction Script -->
+  <script src="js/main.js"></script>
+  
 </body>
 </html>
