@@ -307,6 +307,79 @@ function initEmiCalculator() {
 /* ==========================================================================
    6. SITE VISIT SCHEDULER MODAL
    ========================================================================== */
+/* ==========================================================================
+   6. AUTOMATED WHATSAPP LEAD FORWARDING ENGINE (+91 99453 80337)
+   Whenever ANY form on the website is filled, the details are automatically
+   formatted and forwarded directly to WhatsApp (+91 99453 80337).
+   ========================================================================== */
+const WHATSAPP_DIRECT_PHONE = '919945380337';
+
+function showToastNotification(message) {
+  let toast = document.getElementById('aspireToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'aspireToast';
+    toast.style.cssText = `
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(12, 16, 24, 0.96);
+      border: 1px solid rgba(255, 140, 40, 0.5);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255,140,40,0.25);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 14px;
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+      opacity: 0;
+      max-width: 90vw;
+    `;
+    document.body.appendChild(toast);
+  }
+
+  toast.innerHTML = `
+    <span style="background:#25d366; color:#fff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✓</span>
+    <span>${message}</span>
+  `;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateX(-50%) translateY(0)';
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(100px)';
+  }, 4500);
+}
+
+function forwardLeadToWhatsApp(data) {
+  const lines = [
+    '🏢 *New Property Inquiry | Aspire Housing*',
+    '────────────────────────',
+    `👤 *Client Name:* ${data.name || 'Interested Buyer'}`,
+    `📱 *Phone / WhatsApp:* ${data.phone || 'Provided via form'}`,
+    `📧 *Email:* ${data.email || 'Not provided'}`,
+    `🏡 *Project of Interest:* ${data.project || 'Amritha Varshini & Plotted Townships'}`,
+    data.message ? `📝 *Requirements / Note:* ${data.message}` : '',
+    `🌐 *Source:* Aspire Housing Official Website`,
+    '────────────────────────',
+    'Hello Aspire Housing Team, please share the master plan layout, rate sheet and confirm my site inspection schedule.'
+  ].filter(Boolean);
+
+  const text = lines.join('\n');
+  const waUrl = `https://wa.me/${WHATSAPP_DIRECT_PHONE}?text=${encodeURIComponent(text)}`;
+
+  showToastNotification(`Redirecting to WhatsApp (+91 99453 80337)... Your inquiry has been forwarded!`);
+
+  setTimeout(() => {
+    window.open(waUrl, '_blank');
+  }, 500);
+}
+
 function initModalScheduler() {
   const modal = document.getElementById('siteVisitModal');
   const closeBtn = document.getElementById('closeModalBtn');
@@ -321,7 +394,22 @@ function initModalScheduler() {
       e.preventDefault();
       const proj = btn.getAttribute('data-project-name');
       if (proj && projectInput) {
-        projectInput.value = proj;
+        // If select, search matching option or add
+        let found = false;
+        for (let i = 0; i < projectInput.options.length; i++) {
+          if (projectInput.options[i].value.toLowerCase().includes(proj.toLowerCase()) || proj.toLowerCase().includes(projectInput.options[i].value.toLowerCase())) {
+            projectInput.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          const opt = document.createElement('option');
+          opt.value = proj;
+          opt.innerText = proj;
+          opt.selected = true;
+          projectInput.appendChild(opt);
+        }
       }
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -342,20 +430,71 @@ function initModalScheduler() {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const inputs = form.querySelectorAll('input, select, textarea');
+      const data = {
+        project: projectInput ? projectInput.value : 'General Inquiry',
+        name: form.querySelector('input[type="text"]')?.value || '',
+        email: form.querySelector('input[type="email"]')?.value || '',
+        phone: form.querySelector('input[type="tel"]')?.value || '',
+        message: form.querySelector('textarea')?.value || ''
+      };
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = `<span>Booking Confirmed! ✓</span>`;
-      submitBtn.style.background = '#10b981';
+      submitBtn.innerHTML = `<span>Forwarding to WhatsApp... ✓</span>`;
+      submitBtn.style.background = '#25d366';
+
+      forwardLeadToWhatsApp(data);
 
       setTimeout(() => {
-        alert('Thank you! Your Site Visit request has been received. Our senior relationship manager from Aspire Housing will call you shortly.');
         closeModal();
         form.reset();
         submitBtn.innerHTML = originalText;
         submitBtn.style.background = '';
-      }, 700);
+      }, 900);
     });
   }
+
+  // Also bind all other forms across the website (e.g. Contact Us page, Careers page, inline forms)
+  document.querySelectorAll('form:not(#modalVisitForm)').forEach(otherForm => {
+    otherForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameEl = otherForm.querySelector('input[name="name"], input[placeholder*="name" i], input[type="text"]');
+      const phoneEl = otherForm.querySelector('input[name="phone"], input[placeholder*="phone" i], input[type="tel"]');
+      const emailEl = otherForm.querySelector('input[name="email"], input[type="email"]');
+      const projEl = otherForm.querySelector('select, input[name="project"]');
+      const msgEl = otherForm.querySelector('textarea, input[placeholder*="message" i], input[placeholder*="note" i]');
+
+      const data = {
+        name: nameEl ? nameEl.value : 'Interested Buyer',
+        phone: phoneEl ? phoneEl.value : '',
+        email: emailEl ? emailEl.value : '',
+        project: projEl ? projEl.value : (document.title.split('|')[0] || 'Aspire Housing Inquiry'),
+        message: msgEl ? msgEl.value : ''
+      };
+
+      const submitBtn = otherForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.innerHTML = `<span>Forwarding to WhatsApp... ✓</span>`;
+        submitBtn.style.background = '#25d366';
+      }
+
+      forwardLeadToWhatsApp(data);
+
+      setTimeout(() => {
+        otherForm.reset();
+        if (submitBtn) {
+          submitBtn.innerHTML = `<span>Submitted & Forwarded ✓</span>`;
+          setTimeout(() => {
+            submitBtn.innerHTML = 'Send Message &rarr;';
+            submitBtn.style.background = '';
+          }, 2000);
+        }
+      }, 800);
+    });
+  });
 }
 
 /* ==========================================================================

@@ -75,7 +75,7 @@ function getHeader(activePage = 'home') {
         <a href="about.html" class="nav-link ${activePage === 'about' ? 'active' : ''}">About Us</a>
         
         <div class="nav-item-dropdown">
-          <a href="projects.html" class="nav-link dropdown-trigger ${['projects', 'khb', 'nandi', 'ap', 'habulus'].includes(activePage) ? 'active' : ''}">
+          <a href="projects.html" class="nav-link dropdown-trigger ${['projects', 'amritha', 'khb', 'nandi', 'ap', 'habulus'].includes(activePage) ? 'active' : ''}">
             Projects
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
           </a>
@@ -83,6 +83,10 @@ function getHeader(activePage = 'home') {
             <a href="projects.html" class="dropdown-item">
               <span class="dropdown-title">All Master Developments</span>
               <span class="dropdown-sub">Complete Bengaluru Portfolio</span>
+            </a>
+            <a href="amritha-varshini.html" class="dropdown-item">
+              <span class="dropdown-title">Amritha Varshini (New)</span>
+              <span class="dropdown-sub">23-Acre BMRDA Township • 336 Sites & Luxury Villas</span>
             </a>
             <a href="khb-suryacity.html" class="dropdown-item">
               <span class="dropdown-title">KHB Surya City Phase-4</span>
@@ -109,9 +113,9 @@ function getHeader(activePage = 'home') {
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+917090532343" class="header-phone">
+        <a href="tel:+919945380337" class="header-phone">
           ${icons.phone}
-          <span>+91 70905 32343</span>
+          <span>+91 99453 80337</span>
         </a>
         <button class="btn-primary" data-open-modal="visit">
           <span>Schedule Visit</span>
@@ -133,6 +137,7 @@ function getHeader(activePage = 'home') {
     <a href="about.html" class="mobile-nav-link ${activePage === 'about' ? 'active' : ''}">About Us &rarr;</a>
     <a href="projects.html" class="mobile-nav-link ${activePage === 'projects' ? 'active' : ''}">All Projects &rarr;</a>
     <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.6rem; border-left:2px solid var(--orange-border); margin:0.5rem 0;">
+      <a href="amritha-varshini.html" style="color:var(--orange-bright); text-decoration:none; font-size:0.95rem; font-weight:700;">★ Amritha Varshini (23 Acres BMRDA)</a>
       <a href="khb-suryacity.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• KHB Surya City Phase-4</a>
       <a href="nandi-urban-city.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• Nandi Urban City Devanahalli</a>
       <a href="ap-township.html" style="color:var(--text-muted); text-decoration:none; font-size:0.95rem;">• AP Township BMRDA</a>
@@ -142,7 +147,7 @@ function getHeader(activePage = 'home') {
     <a href="careers.html" class="mobile-nav-link ${activePage === 'careers' ? 'active' : ''}">Careers & Culture &rarr;</a>
     <a href="contact.html" class="mobile-nav-link ${activePage === 'contact' ? 'active' : ''}">Contact & Office &rarr;</a>
     <div style="margin-top:2rem;">
-      <a href="tel:+917090532343" class="btn-primary" style="width:100%; text-align:center;">Call +91 70905 32343</a>
+      <a href="tel:+919945380337" class="btn-primary" style="width:100%; text-align:center;">Call +91 99453 80337</a>
     </div>
   </div>
   `;
@@ -166,11 +171,11 @@ function getFooter() {
             Built on Trust. Backed by Transparency. Delivering clients more project clarity, government-approved layouts, and high-growth real estate investments across Bengaluru.
           </p>
           <div style="display:flex; gap:0.75rem;">
-            <a href="tel:+917090532343" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
+            <a href="tel:+919945380337" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px;">
               ${icons.phone}
-              <span>+91 70905 32343</span>
+              <span>+91 99453 80337</span>
             </a>
-            <a href="https://wa.me/917090532343" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+            <a href="https://wa.me/919945380337" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">
               ${icons.whatsapp}
               <span>WhatsApp</span>
             </a>
@@ -180,6 +185,7 @@ function getFooter() {
         <div>
           <h4 class="footer-col-title">Portfolio</h4>
           <ul class="footer-links-list">
+            <li><a href="amritha-varshini.html" class="footer-link" style="color:var(--orange-bright); font-weight:600;">★ Amritha Varshini (23-Acre BMRDA)</a></li>
             <li><a href="khb-suryacity.html" class="footer-link">KHB Surya City Phase-4</a></li>
             <li><a href="nandi-urban-city.html" class="footer-link">Nandi Urban City</a></li>
             <li><a href="ap-township.html" class="footer-link">AP Township BMRDA</a></li>
@@ -207,7 +213,7 @@ function getFooter() {
           </p>
           <p style="color:var(--text-dim); font-size:0.82rem;">
             Email: <a href="mailto:info@thepurplepalms.com" style="color:var(--orange);">info@thepurplepalms.com</a><br>
-            Direct: <a href="tel:+917090532343" style="color:var(--orange);">+91 70905 32343</a>
+            Direct: <a href="tel:+919945380337" style="color:var(--orange);">+91 99453 80337</a>
           </p>
         </div>
       </div>
@@ -222,17 +228,17 @@ function getFooter() {
       </div>
 
       <div class="footer-legal-note">
-        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township) and STRRPA / BIAAPA sanctions.
+        <strong>Disclaimer:</strong> The content is for informational purposes only and does not constitute an offer or commitment. Prices, specifications and property availability are subject to change without prior notice. By sharing your contact details, you consent to receive communication via Call, SMS, Email, or WhatsApp, even if DND is active. RERA Approvals: PRM/KA/RERA/1251/308/PR/220118/004642 (AP Township), APA/LAO No. 142/2012-13 (Amritha Varshini BMRDA), and STRRPA / BIAAPA sanctions.
       </div>
     </div>
   </footer>
 
   <!-- Floating Quick Actions -->
   <div class="floating-actions">
-    <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+    <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20would%20like%20details%20on%20your%20Bangalore%20plotted%20projects" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
       ${icons.whatsapp}
     </a>
-    <a href="tel:+917090532343" class="floating-btn phone" title="Call Us Directly">
+    <a href="tel:+919945380337" class="floating-btn phone" title="Call Us Directly">
       ${icons.phone}
     </a>
   </div>
@@ -250,7 +256,13 @@ function getFooter() {
       <form id="modalVisitForm">
         <div class="form-input-group">
           <label class="form-label">Select Development Project</label>
-          <input type="text" id="modalProjectField" class="form-control" value="KHB Surya City Phase-4" readonly style="background:rgba(255,255,255,0.08); font-weight:600; color:var(--orange-bright);" />
+          <select id="modalProjectField" class="form-control" style="background:#111520; font-weight:600; color:var(--orange-bright);">
+            <option value="Amritha Varshini (23-Acre BMRDA Layout)">Amritha Varshini (23-Acre BMRDA Layout • Attibele / Suryacity-3)</option>
+            <option value="KHB Surya City Phase-4">KHB Surya City Phase-4 (2,400-Acre Mega Township)</option>
+            <option value="Nandi Urban City Devanahalli">Nandi Urban City (12-Acre BIAAPA near Airport)</option>
+            <option value="AP Township BMRDA">AP Township (30-Acre BMRDA near E-City)</option>
+            <option value="Habulus Tranquil Neo Town">Habulus Tranquil (Ultra-Luxury Apartments)</option>
+          </select>
         </div>
         <div class="form-input-group">
           <label class="form-label">Full Name *</label>

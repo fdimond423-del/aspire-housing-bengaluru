@@ -304,7 +304,7 @@ const contactHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us & Corporate Office Directory | ASPIRE HOUSING</title>
-  <meta name="description" content="Contact Aspire Housing Corporate Office in Jayanagar, Bangalore. Call +91 70905 32343, WhatsApp, or schedule an in-person meeting with our investment team.">
+  <meta name="description" content="Contact Aspire Housing Corporate Office in Jayanagar, Bangalore. Call +91 99453 80337, WhatsApp, or schedule an in-person meeting with our investment team.">
   <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/style.css">
@@ -349,7 +349,7 @@ const contactHtml = `<!DOCTYPE html>
               <div style="margin-bottom:1.6rem;">
                 <div style="font-size:0.75rem; color:var(--orange-bright); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Direct Telephone & WhatsApp</div>
                 <div style="font-size:1.35rem; font-weight:900;">
-                  <a href="tel:+917090532343" style="color:#fff; text-decoration:none;">+91 70905 32343</a>
+                  <a href="tel:+919945380337" style="color:#fff; text-decoration:none;">+91 99453 80337</a>
                 </div>
                 <p style="color:var(--text-dim); font-size:0.82rem; margin-top:4px;">Available Monday – Sunday (9:00 AM – 7:30 PM IST)</p>
               </div>
@@ -369,11 +369,11 @@ const contactHtml = `<!DOCTYPE html>
               </div>
 
               <div style="display:flex; gap:1rem; margin-top:2rem;">
-                <a href="https://wa.me/917090532343?text=Hi%20Aspire%20Housing,%20I%20would%20like%20to%20inquire%20about%20your%20properties" target="_blank" class="btn-primary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
+                <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20would%20like%20to%20inquire%20about%20your%20properties" target="_blank" class="btn-primary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
                   ${icons.whatsapp}
                   <span>WhatsApp</span>
                 </a>
-                <a href="tel:+917090532343" class="btn-secondary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
+                <a href="tel:+919945380337" class="btn-secondary" style="flex:1; padding:12px; font-size:0.9rem; text-align:center;">
                   ${icons.phone}
                   <span>Call Us</span>
                 </a>
@@ -414,6 +414,7 @@ const contactHtml = `<!DOCTYPE html>
                 <div class="form-input-group">
                   <label class="form-label">Development Project of Interest</label>
                   <select class="form-control" style="background:#111520;">
+                    <option>Amritha Varshini (Guddahatti Attibele - 23 Acres BMRDA)</option>
                     <option>KHB Surya City Phase-4 (Bannerghatta Road Jigani - ₹46.80L+)</option>
                     <option>Nandi Urban City (Devanahalli Airport Corridor - 12 Acres)</option>
                     <option>AP Township (Near Electronic City - 30 Acres BMRDA)</option>
@@ -465,7 +466,7 @@ const contactHtml = `<!DOCTYPE html>
               <div style="color:var(--orange-bright); margin-bottom:0.6rem; display:flex; justify-content:center;">${icons.building}</div>
               <div style="font-size:1.2rem; font-weight:800; color:#fff;">ASPIRE HOUSING CORPORATE HQ</div>
               <div style="font-size:0.85rem; color:var(--orange-bright); margin-top:4px; font-weight:600;">Lakshmi Enclave, Jayanagar 9th Block, Bangalore</div>
-              <div style="font-size:0.82rem; color:var(--text-dim); margin-top:8px;">Direct Line: +91 70905 32343</div>
+              <div style="font-size:0.82rem; color:var(--text-dim); margin-top:8px;">Direct Line & WhatsApp: +91 99453 80337</div>
             </div>
           </div>
         </div>

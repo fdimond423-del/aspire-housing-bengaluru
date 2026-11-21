@@ -81,12 +81,12 @@ const indexHtml = `<!DOCTYPE html>
 
             <!-- Main Showcase Image Card -->
             <div class="hero-visual-card" data-tilt>
-              <img src="assets/images/plot-demarcation-ground.jpg" alt="Aspire Housing Demarcated Villa Plots & Townships" class="hero-visual-img" />
+              <img src="assets/images/amritha-hero-render.jpg" alt="Amritha Varshini & Aspire Housing Plotted Townships" class="hero-visual-img" />
               <div class="hero-visual-gradient"></div>
               <div class="hero-visual-content">
-                <span class="hero-visual-tag">Featured Plotted Township</span>
-                <div class="hero-visual-title">Demarcated Villa Plots & Strategic Plotted Land</div>
-                <div class="hero-visual-desc">Electronic A-Khata • Zero Lease Period • Cauvery Water Guaranteed</div>
+                <span class="hero-visual-tag">Featured 23-Acre Master Township</span>
+                <div class="hero-visual-title">Amritha Varshini & KHB Surya City Townships</div>
+                <div class="hero-visual-desc">BMRDA Approved • 336 Villa Sites • 100 Ft Main Road • Cauvery Water</div>
               </div>
             </div>
 
@@ -96,8 +96,8 @@ const indexHtml = `<!DOCTYPE html>
                 ${icons.shieldCheck}
               </div>
               <div>
-                <div style="font-size:0.72rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">RERA & BDA Approved</div>
-                <div style="font-size:0.92rem; color:#fff; font-weight:800;">Plots Starting ₹3,900 / sq.ft*</div>
+                <div style="font-size:0.72rem; color:#94a3b8; font-weight:700; text-transform:uppercase;">BMRDA & STRRPA Approved</div>
+                <div style="font-size:0.92rem; color:#fff; font-weight:800;">Plots Starting ₹3,900 – ₹6,499 / sq.ft*</div>
               </div>
             </div>
           </div>
@@ -108,16 +108,16 @@ const indexHtml = `<!DOCTYPE html>
     <!-- Ticker Rail -->
     <div class="ticker-wrap">
       <div class="ticker-track">
-        <div class="ticker-item"><span>KHB Surya City Phase-4</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>★ Amritha Varshini 23-Acre BMRDA</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>KHB Surya City Phase-4 (2,400 Acres)</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>Nandi Urban City Devanahalli</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>AP Township BMRDA & RERA Approved</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>Habulus Tranquil 2 & 3 BHK</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Electronic A-Khata</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Zero Lease Period</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Cauvery Water Connectivity</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Electronic A-Khata Ready</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>WhatsApp Desk: +91 99453 80337</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>★ Amritha Varshini 336 Approved Sites</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>KHB Surya City Phase-4</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Nandi Urban City Devanahalli</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>AP Township BMRDA & RERA Approved</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Cauvery Water Connectivity</span> <span class="dot"></span></div>
       </div>
     </div>
 
@@ -133,6 +133,52 @@ const indexHtml = `<!DOCTYPE html>
         </div>
 
         <div class="bento-grid">
+          <!-- Project 0: Amritha Varshini (New Flagship 23-Acre Community) -->
+          <div class="col-12" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+            <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
+              <div class="project-card-image-box" style="height:100%; min-height:300px;">
+                <img src="assets/images/amritha-hero-render.jpg" alt="Amritha Varshini 23-Acre BMRDA Plotted Development" class="project-card-img" style="height:100%; object-fit:cover;" />
+                <span class="project-badge-tag" style="background:#10b981;">BMRDA Approved • APA/LAO No. 142/2012-13</span>
+                <span class="project-price-tag">₹6,499 / sq.ft* • 23 Acres</span>
+              </div>
+              <div class="project-card-body" style="padding:2rem;">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Guddahatti – Attibele, Adjacent to KHB Suryacity Phase-3, Bengaluru</span>
+                </div>
+                <h3 class="project-card-title" style="font-size:1.6rem;">
+                  <a href="amritha-varshini.html">Amritha Varshini — 23-Acre Plotted & Luxury Villa Township</a>
+                </h3>
+                <p class="project-description">
+                  Developed by Sri Sri Constructions, Amritha Varshini is a premier 23-acre BMRDA-approved integrated community beside KHB Suryacity Phase-3 and Upcoming Swift City SEZ. Features 336 demarcated villa plots (30x40, 30x50, 40x60), independent luxury 2/3/4 BHK villas, 100 ft wide main roadway, 6 landscaped parks, and grand clubhouse.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Total Land</span>
+                    <span class="spec-value">23 Acres</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Approved Sites</span>
+                    <span class="spec-value">336 Villa Plots</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Approval</span>
+                    <span class="spec-value">BMRDA Sanctioned</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Highway Access</span>
+                    <span class="spec-value">1.6 Km to Hosur Rd</span>
+                  </div>
+                </div>
+                <div class="project-card-footer" style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
+                  <a href="amritha-varshini.html" class="btn-primary" style="font-size:0.9rem; padding:10px 22px;">Explore Layout & Floorplans &rarr;</a>
+                  <button class="btn-secondary" data-open-modal="visit" data-project-name="Amritha Varshini 23-Acre BMRDA" style="font-size:0.9rem; padding:10px 20px;">Book Site Inspection</button>
+                  <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20share%20details%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="font-size:0.9rem; padding:10px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">${icons.whatsapp} WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Project 1: KHB Surya City Phase-4 -->
           <div class="col-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
@@ -746,6 +792,37 @@ const projectsHtml = `<!DOCTYPE html>
     <section class="section">
       <div class="section-container">
         <div class="bento-grid">
+          <!-- 0. Amritha Varshini (New Flagship) -->
+          <div class="col-12" data-category="mega ecity plots" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+            <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
+              <div class="project-card-image-box" style="height:100%; min-height:280px;">
+                <img src="assets/images/amritha-hero-render.jpg" alt="Amritha Varshini 23-Acre BMRDA Plotted Development" class="project-card-img" style="height:100%; object-fit:cover;" />
+                <span class="project-badge-tag" style="background:#10b981;">BMRDA Approved • APA/LAO No. 142/2012-13</span>
+                <span class="project-price-tag">₹6,499 / sq.ft* • 23 Acres</span>
+              </div>
+              <div class="project-card-body" style="padding:2rem;">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Guddahatti – Attibele, Adjacent to KHB Suryacity Phase-3</span>
+                </div>
+                <h2 class="project-card-title"><a href="amritha-varshini.html">Amritha Varshini — 23-Acre BMRDA Plotted Township</a></h2>
+                <p class="project-description">
+                  Developed by Sri Sri Constructions, featuring 336 approved villa plots (30x40, 30x50, 40x60), independent luxury 2/3/4 BHK villas, apartments, 100 ft wide main road connecting to KHB Suryanagar Phase-III, and 6 landscaped parks.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Extent</span><span class="spec-value">23 Acres</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Sanctioned</span><span class="spec-value">336 Plots</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Status</span><span class="spec-value">Ready E-Khata</span></div>
+                </div>
+                <div class="project-card-footer" style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.2rem;">
+                  <a href="amritha-varshini.html" class="btn-primary" style="font-size:0.85rem; padding:8px 18px;">Full Details & Master Plan &rarr;</a>
+                  <button class="btn-secondary" data-open-modal="visit" data-project-name="Amritha Varshini 23-Acre BMRDA" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                  <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20send%20me%20the%20cost%20sheet%20and%20layout%20plan%20for%20Amritha%20Varshini." target="_blank" class="btn-secondary" style="font-size:0.85rem; padding:8px 16px; color:#25d366; border-color:rgba(37,211,102,0.4);">${icons.whatsapp} WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- 1. KHB Surya City Phase-4 -->
           <div class="col-6" data-category="mega ecity" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card" data-tilt>
