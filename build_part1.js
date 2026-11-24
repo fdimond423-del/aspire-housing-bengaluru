@@ -2,14 +2,40 @@ const fs = require('fs');
 const path = require('path');
 const { getHeader, getFooter, icons } = require('./templates');
 
+// Helper to generate a project slider image box
+function makeProjectSlider(images, badgeText, badgeBg, priceText) {
+  const slidesHtml = images.map((img, i) => 
+    `<img src="${img.src}" alt="${img.alt}" class="project-slide ${i === 0 ? 'active' : ''}" />`
+  ).join('\n                ');
+
+  const dotsHtml = images.map((_, i) => 
+    `<span class="slider-dot ${i === 0 ? 'active' : ''}"></span>`
+  ).join('');
+
+  return `
+              <div class="project-card-image-box project-slider">
+                <div class="project-slides-track">
+                ${slidesHtml}
+                </div>
+                <button class="slider-arrow-btn prev" aria-label="Previous Image">&lsaquo;</button>
+                <button class="slider-arrow-btn next" aria-label="Next Image">&rsaquo;</button>
+                <div class="slider-indicators">
+                  ${dotsHtml}
+                </div>
+                <span class="slider-counter-tag">1 / ${images.length}</span>
+                <span class="project-badge-tag" style="background:${badgeBg};">${badgeText}</span>
+                <span class="project-price-tag">${priceText}</span>
+              </div>`;
+}
+
 // 1. INDEX.HTML (Home Page)
 const indexHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASPIRE HOUSING | Built on Trust. Backed by Transparency.</title>
-  <meta name="description" content="Aspire Housing - Delivering clients more project clarity & greater insight across Bengaluru's premier plotted townships and luxury residential developments.">
+  <title>ASPIRE HOUSING | Who We Are & What We Are — Bengaluru Plotted Specialists</title>
+  <meta name="description" content="Aspire Housing in strategic association with The Purple Palms. Who we are: Bengaluru's premier plotted land developers. What we are: 100% government-approved (BMRDA, STRRPA, BIAAPA) layouts with Electronic A-Khata, Cauvery water, and bank approvals.">
   <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,7 +44,7 @@ const indexHtml = `<!DOCTYPE html>
   ${getHeader('home')}
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section: Who We Are & What We Are -->
     <section class="hero-section">
       <div class="hero-bg-media">
         <img src="assets/images/hero-plotting-main.jpg" alt="Aspire Housing Premier Plotted Townships" class="hero-bg-img" />
@@ -30,21 +56,26 @@ const indexHtml = `<!DOCTYPE html>
           <!-- Left Column: Hero Text & Counters -->
           <div>
             <div class="hero-badge-pill" data-aos="fade-down" data-aos-duration="600">
-              <span class="dot"></span>
-              <span>Bengaluru's Premier Real Estate Advisory</span>
+              <span class="dot" style="background:#10b981;"></span>
+              <span>In Strategic Association with The Purple Palms</span>
             </div>
 
             <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-              Delivering our clients more <span class="highlight text-shimmer">project clarity</span> & greater insight.
+              Who We Are & <span class="highlight text-shimmer">What We Are</span> in Bengaluru Real Estate.
             </h1>
 
-            <p class="hero-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              Aspire Housing was founded as an emerging entity in the Real Estate sector, motivated by a shared ambition to introduce order to this frequently tumultuous industry. Our journey commenced with conversations focused on re-imagining the Real Estate environment through innovative approaches. The shared ethics and values we adhere to have formed the culture at Aspire Housing, which prioritizes transparency in the industry.
-            </p>
+            <div class="hero-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" style="display:flex; flex-direction:column; gap:0.9rem;">
+              <p>
+                <strong>Who We Are:</strong> Aspire Housing is an emerging, value-driven land development enterprise operating in strategic alliance with <strong>The Purple Palms</strong> (<a href="https://thepurplepalms.com/" target="_blank" rel="noopener" style="color:var(--orange-bright); text-decoration:underline;">thepurplepalms.com</a>). Founded on uncompromising ethics, our core mission is to bring structural order, total transparency, and legal certainty to Bengaluru’s fragmented real estate market.
+              </p>
+              <p>
+                <strong>What We Are:</strong> We are specialized master-planners of government-approved plotted communities (BMRDA, STRRPA, BIAAPA, KHB, BBMP). Every project we curate delivers individual <strong>Electronic A-Khata</strong>, legally scrutinized titles, leading bank approvals (SBI, HDFC, ICICI), and complete physical infrastructure—wide asphalted blacktop roads, underground electricity, Cauvery water integration, and lush landscaped parks.
+              </p>
+            </div>
 
             <div style="display:flex; flex-wrap:wrap; gap:1rem;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-              <a href="projects.html" class="btn-primary" style="padding:14px 32px; font-size:1rem;">Explore Master Projects &rarr;</a>
-              <button class="btn-secondary" data-open-modal="visit" data-project-name="General Inquiry" style="padding:14px 28px; font-size:1rem;">Book a Private Site Tour</button>
+              <a href="#projects" class="btn-primary" style="padding:14px 32px; font-size:1rem;">Explore All Project Segments &rarr;</a>
+              <button class="btn-secondary" data-open-modal="visit" data-project-name="General Inquiry" style="padding:14px 28px; font-size:1rem;">Schedule On-Site Inspection</button>
             </div>
 
             <!-- Hero Stats Row -->
@@ -59,7 +90,7 @@ const indexHtml = `<!DOCTYPE html>
               </div>
               <div class="hero-stat-item">
                 <div class="hero-stat-number"><span data-counter="100" data-suffix="%">100%</span></div>
-                <div class="hero-stat-label">RERA & STRRPA Approved</div>
+                <div class="hero-stat-label">BMRDA, STRRPA & BIAAPA</div>
               </div>
               <div class="hero-stat-item">
                 <div class="hero-stat-number"><span class="accent">₹</span><span data-counter="46" data-suffix=".80L*">46.80L*</span></div>
@@ -70,14 +101,14 @@ const indexHtml = `<!DOCTYPE html>
 
           <!-- Right Column: 3D Showcase Image Card -->
           <div class="hero-visual-container" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
-            <!-- Main Showcase Image Card -->
+            <!-- Main Showcase Image Card with Image Reel -->
             <div class="hero-visual-card" data-tilt>
-              <img src="assets/images/plot-aerial-master.jpg" alt="Amritha Varshini & Aspire Housing Plotted Townships" class="hero-visual-img" />
+              <img src="assets/images/plot-aerial-master.jpg" alt="Aspire Housing Plotted Developments" class="hero-visual-img" />
               <div class="hero-visual-gradient"></div>
               <div class="hero-visual-content">
-                <span class="hero-visual-tag">Featured 23-Acre Master Township</span>
-                <div class="hero-visual-title">Amritha Varshini & KHB Surya City Townships</div>
-                <div class="hero-visual-desc">BMRDA Approved • 336 Villa Sites • 100 Ft Main Road • Cauvery Water</div>
+                <span class="hero-visual-tag">Bespoke Plotted Communities</span>
+                <div class="hero-visual-title">Completed &bull; Ongoing &bull; Upcoming Portfolios</div>
+                <div class="hero-visual-desc">BMRDA &bull; STRRPA &bull; BIAAPA &bull; Clear Titles &bull; Direct Developer Representation</div>
               </div>
             </div>
           </div>
@@ -89,53 +120,76 @@ const indexHtml = `<!DOCTYPE html>
     <div class="ticker-wrap">
       <div class="ticker-track">
         <div class="ticker-item"><span>★ Amritha Varshini 23-Acre BMRDA</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Madhura Lotus (6 Acres BMRDA Kanakapura Rd)</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>KHB Surya City Phase-4 (2,400 Acres)</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>Nandi Urban City Devanahalli</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>AP Township BMRDA & RERA Approved</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Habulus Tranquil 2 & 3 BHK</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>Electronic A-Khata Ready</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>WhatsApp Desk: +91 99453 80337</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>★ Amritha Varshini 336 Approved Sites</span> <span class="dot"></span></div>
-        <div class="ticker-item"><span>KHB Surya City Phase-4</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>AP Township BMRDA & RERA (30 Acres)</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Habulus Tranquil 2 & 3 BHK Neo Town</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>Direct WhatsApp Lead Desk: +91 99453 80337</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>100% Electronic A-Khata Ready</span> <span class="dot"></span></div>
+        <div class="ticker-item"><span>The Purple Palms Group Affiliation</span> <span class="dot"></span></div>
         <div class="ticker-item"><span>Cauvery Water Connectivity</span> <span class="dot"></span></div>
       </div>
     </div>
 
-    <!-- Featured Master Projects Section -->
+    <!-- Master Projects Section: Completed, Ongoing, Upcoming Segments -->
     <section class="section" id="projects">
       <div class="section-container">
         <div class="section-header" data-aos="fade-up" data-aos-duration="700">
-          <span class="section-tag">Bengaluru Flagship Portfolio</span>
-          <h2 class="section-title">Our Prime Real Estate Developments</h2>
+          <span class="section-tag">Bengaluru Master Developments</span>
+          <h2 class="section-title">Projects Portfolio: Completed, Ongoing & Upcoming</h2>
           <p class="section-subtitle">
-            Explore meticulously planned residential townships and luxury gated communities offering supreme legal clarity, government-backed infrastructure, and soaring capital appreciation.
+            Explore our curated developments under three clear categories. Every project card features interactive scrolling images so you can inspect authentic ground infrastructure, master layout plans, and aerial progress.
           </p>
+
+          <!-- Interactive Segment Filter Tabs -->
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.75rem; margin-top:2rem;">
+            <button class="filter-tab-btn btn-secondary active" data-filter="all" style="padding:10px 22px; font-size:0.9rem;">
+              All Developments (8)
+            </button>
+            <button class="filter-tab-btn btn-secondary" data-filter="completed" style="padding:10px 22px; font-size:0.9rem; color:var(--orange-bright); border-color:var(--orange-border);">
+              ★ Completed Projects (4)
+            </button>
+            <button class="filter-tab-btn btn-secondary" data-filter="ongoing" style="padding:10px 22px; font-size:0.9rem; color:#10b981; border-color:rgba(16,185,129,0.35);">
+              ★ Ongoing Flagships (2)
+            </button>
+            <button class="filter-tab-btn btn-secondary" data-filter="upcoming" style="padding:10px 22px; font-size:0.9rem; color:#60a5fa; border-color:rgba(59,130,246,0.35);">
+              ★ Upcoming Launches (2)
+            </button>
+          </div>
         </div>
 
         <div class="bento-grid">
-          <!-- Project 0: Amritha Varshini (New Flagship 23-Acre Community) -->
-          <div class="col-12" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+          <!-- =================================================================
+               SEGMENT 1: ONGOING DEVELOPMENTS
+               ================================================================= -->
+          
+          <!-- Ongoing 1: Amritha Varshini (Flagship 23-Acre BMRDA Layout) -->
+          <div class="col-12" data-category="ongoing" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+            <span class="segment-header-pill ongoing">● Ongoing Master Township</span>
             <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
-              <div class="project-card-image-box" style="height:100%; min-height:300px;">
-                <img src="assets/images/plot-aerial-master.jpg" alt="Amritha Varshini 23-Acre BMRDA Plotted Development" class="project-card-img" style="height:100%; object-fit:cover;" />
-                <span class="project-badge-tag" style="background:#10b981;">BMRDA Approved • APA/LAO No. 142/2012-13</span>
-                <span class="project-price-tag">₹6,499 / sq.ft* • 23 Acres</span>
-              </div>
+              ${makeProjectSlider([
+                { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini Gated Entrance' },
+                { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Avenue & Villas' },
+                { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Plan' },
+                { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Architecture' }
+              ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+              
               <div class="project-card-body" style="padding:2rem;">
                 <div class="project-location">
                   ${icons.mapPin}
-                  <span>Guddahatti – Attibele, Adjacent to KHB Suryacity Phase-3, Bengaluru</span>
+                  <span>Guddahatti – Attibele, Beside KHB Suryacity Phase-3, Bengaluru</span>
                 </div>
                 <h3 class="project-card-title" style="font-size:1.6rem;">
                   <a href="amritha-varshini.html">Amritha Varshini — 23-Acre Plotted & Luxury Villa Township</a>
                 </h3>
                 <p class="project-description">
-                  Developed by Sri Sri Constructions, Amritha Varshini is a premier 23-acre BMRDA-approved integrated community beside KHB Suryacity Phase-3 and Upcoming Swift City SEZ. Features 336 demarcated villa plots (30x40, 30x50, 40x60), independent luxury 2/3/4 BHK villas, 100 ft wide main roadway, 6 landscaped parks, and grand clubhouse.
+                  Developed by Sri Sri Constructions, Amritha Varshini is a premier 23-acre BMRDA-approved integrated community beside KHB Suryacity Phase-3 and Upcoming Swift City SEZ. Features 336 demarcated villa plots (30x40, 30x50, 40x60), independent luxury 2/3/4 BHK villas, 100 ft wide main roadway connecting to Suryacity-3, 6 landscaped parks, and grand clubhouse.
                 </p>
                 <div class="project-specs-grid">
                   <div class="project-spec-item">
-                    <span class="spec-label">Total Land</span>
-                    <span class="spec-value">23 Acres</span>
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:#10b981;">Ongoing Flagship</span>
                   </div>
                   <div class="project-spec-item">
                     <span class="spec-label">Approved Sites</span>
@@ -146,8 +200,8 @@ const indexHtml = `<!DOCTYPE html>
                     <span class="spec-value">BMRDA Sanctioned</span>
                   </div>
                   <div class="project-spec-item">
-                    <span class="spec-label">Highway Access</span>
-                    <span class="spec-value">1.6 Km to Hosur Rd</span>
+                    <span class="spec-label">Main Roadway</span>
+                    <span class="spec-value">100 Ft Master Road</span>
                   </div>
                 </div>
                 <div class="project-card-footer" style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
@@ -159,96 +213,17 @@ const indexHtml = `<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Project 1: KHB Surya City Phase-4 -->
-          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+          <!-- Ongoing 2: AP Township (30-Acre BMRDA & RERA Layout near E-City) -->
+          <div class="col-6" data-category="ongoing" data-aos="fade-up" data-aos-delay="100">
+            <span class="segment-header-pill ongoing">● Ongoing Development</span>
             <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-ground-real.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
-                <span class="project-badge-tag">Government Backed • KHB</span>
-                <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
-              </div>
-              <div class="project-card-body">
-                <div class="project-location">
-                  ${icons.mapPin}
-                  <span>Bannerghatta Road, Jigani, Bengaluru</span>
-                </div>
-                <h3 class="project-card-title">
-                  <a href="khb-suryacity.html">KHB Surya City Phase – 4</a>
-                </h3>
-                <p class="project-description">
-                  Surya City Phase-4: Asia’s Largest Residential Layout Bengaluru’s 2400-Acre Mega Township. We are thrilled to announce the launch of 36,000 residential villa plots developed in collaboration with farmers under Karnataka Housing Board with Cauvery water, 60-acre Sports Club, and STRRPA approval.
-                </p>
-                <div class="project-specs-grid">
-                  <div class="project-spec-item">
-                    <span class="spec-label">Township Size</span>
-                    <span class="spec-value">2,400 Acres</span>
-                  </div>
-                  <div class="project-spec-item">
-                    <span class="spec-label">Plot Dimensions</span>
-                    <span class="spec-value">30x40 to 40x60</span>
-                  </div>
-                  <div class="project-spec-item">
-                    <span class="spec-label">Approval</span>
-                    <span class="spec-value">STRRPA / BBMP</span>
-                  </div>
-                </div>
-                <div class="project-card-footer">
-                  <a href="khb-suryacity.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Layout Details &rarr;</a>
-                  <button class="btn-primary" data-open-modal="visit" data-project-name="KHB Surya City Phase-4" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
-                </div>
-              </div>
-            </div>
-          </div>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/AP-Township.jpg', alt: 'AP Township Entrance & Greenery' },
+                { src: 'assets/images/purple/AP-Township-collage.png', alt: 'AP Township Master Collage' },
+                { src: 'assets/images/purple/IMG_20251123_105340-scaled.jpg', alt: 'AP Township Ground Avenue' },
+                { src: 'assets/images/purple/master-plan-and-key-amenities-scaled.jpg', alt: 'AP Township Master Plan & Amenities' }
+              ], 'BMRDA & RERA Approved', '#10b981', '30 Acres • 500 Plots')}
 
-          <!-- Project 2: Nandi Urban City Devanahalli -->
-          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-gated-aerial.png" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
-                <span class="project-badge-tag">Airport Corridor • BIAAPA</span>
-                <span class="project-price-tag">Exclusive Launch Pricing</span>
-              </div>
-              <div class="project-card-body">
-                <div class="project-location">
-                  ${icons.mapPin}
-                  <span>Devanahalli, North Bengaluru (10 Mins to Airport)</span>
-                </div>
-                <h3 class="project-card-title">
-                  <a href="nandi-urban-city.html">Nandi Urban City – Where Weekends Begin Every Day</a>
-                </h3>
-                <p class="project-description">
-                  Located in Devanahalli, North Bengaluru — Nandi Urban City is a serene 12-acre BIAAPA-approved plotted development, just minutes from Kempegowda International Airport and surrounded by Nandi Hills, offering the ideal blend of nature, connectivity, and future-ready infrastructure with 7 landscaped parks.
-                </p>
-                <div class="project-specs-grid">
-                  <div class="project-spec-item">
-                    <span class="spec-label">Land Extent</span>
-                    <span class="spec-value">12 Acres Gated</span>
-                  </div>
-                  <div class="project-spec-item">
-                    <span class="spec-label">Total Units</span>
-                    <span class="spec-value">147 Villa Plots</span>
-                  </div>
-                  <div class="project-spec-item">
-                    <span class="spec-label">Mansion Plots</span>
-                    <span class="spec-value">3,000+ sq.ft</span>
-                  </div>
-                </div>
-                <div class="project-card-footer">
-                  <a href="nandi-urban-city.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Master Plan &rarr;</a>
-                  <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: AP Township -->
-          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-master-plan-72.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
-                <span class="project-badge-tag">RERA & BMRDA Approved</span>
-                <span class="project-price-tag">High Growth Corridor</span>
-              </div>
               <div class="project-card-body">
                 <div class="project-location">
                   ${icons.mapPin}
@@ -258,16 +233,16 @@ const indexHtml = `<!DOCTYPE html>
                   <a href="ap-township.html">AP Township – Live Where Comfort Meets Luxury</a>
                 </h3>
                 <p class="project-description">
-                  A BMRDA & RERA-approved 30-acre township featuring 500 premium plots and exceptional infrastructure. Strategically located near Electronic City for high growth, featuring 18,000+ trees, 48% open green space, 8 themed parks, and over 50+ lifestyle amenities including clubhouse and swimming pool.
+                  A BMRDA & RERA-approved 30-acre township featuring 500 premium plots. Located in the high-growth corridor near Electronic City, featuring 18,000+ trees, 48% open green space, 8 themed parks, and over 50+ lifestyle amenities including clubhouse and swimming pool.
                 </p>
                 <div class="project-specs-grid">
                   <div class="project-spec-item">
-                    <span class="spec-label">Open Green</span>
-                    <span class="spec-value">48% Greenery</span>
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:#10b981;">Ongoing</span>
                   </div>
                   <div class="project-spec-item">
-                    <span class="spec-label">Total Trees</span>
-                    <span class="spec-value">18,000+ Trees</span>
+                    <span class="spec-label">Open Green</span>
+                    <span class="spec-value">48% Greenery</span>
                   </div>
                   <div class="project-spec-item">
                     <span class="spec-label">RERA ID</span>
@@ -282,14 +257,153 @@ const indexHtml = `<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Project 4: Habulus Tranquil -->
-          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- =================================================================
+               SEGMENT 2: COMPLETED DEVELOPMENTS
+               ================================================================= -->
+
+          <!-- Completed 1: Madhura Lotus (6-Acre BMRDA Villa Plots Kanakapura Road) -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="150">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
             <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-park-layout.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
-                <span class="project-badge-tag">Neo Town High-Rise</span>
-                <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-pin-land.jpg', alt: 'Madhura Lotus Aerial Layout' },
+                { src: 'assets/images/user-plot-park-layout.jpg', alt: 'Madhura Lotus Park Layout' },
+                { src: 'assets/images/user-plot-ground-real.jpg', alt: 'Madhura Lotus Demarcated Plots' },
+                { src: 'assets/images/plot-layout-avenue.jpg', alt: 'Madhura Lotus Paved Internal Avenue' }
+              ], 'BMRDA Approved Layout', 'var(--orange)', 'From ₹62.39L* • 6 Acres')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Kaggalipura, Kanakapura Road (NH-948), Bengaluru South</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="madhura-lotus.html">Madhura Lotus – Boutique 6-Acre Gated Community</a>
+                </h3>
+                <p class="project-description">
+                  Sourced in alliance with The Purple Palms, Madhura Lotus is a completed 6-acre BMRDA-approved plotted layout with 90 exclusive villa plots. Located on NH-948 next to DAV Public School, 10 mins from Silk Institute Metro Station with asphalt roads, individual water lines, and Electronic A-Khata.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:var(--orange-bright);">Completed</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Total Units</span>
+                    <span class="spec-value">90 Villa Plots</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Metro Distance</span>
+                    <span class="spec-value">10 Mins (Silk Inst)</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="madhura-lotus.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Full Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Madhura Lotus Kaggalipura" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
               </div>
+            </div>
+          </div>
+
+          <!-- Completed 2: KHB Surya City Phase-4 (2,400-Acre Mega Township) -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="200">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/suryacity-1.jpg', alt: 'KHB Surya City Phase 4 Entrance & Layout' },
+                { src: 'assets/images/purple/khb-1-1.jpg', alt: 'KHB Surya City Phase 4 Master Avenue' },
+                { src: 'assets/images/purple/Gallery-1.jpg', alt: 'KHB Surya City Phase 4 Infrastructure' },
+                { src: 'assets/images/user-plot-ground-real.jpg', alt: 'KHB Surya City Demarcated Plots' }
+              ], 'Government Backed • KHB & STRRPA', 'var(--orange)', 'From ₹46.80L* (₹3900/sq.ft)')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Bannerghatta Road, Jigani, Bengaluru</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="khb-suryacity.html">KHB Surya City Phase – 4</a>
+                </h3>
+                <p class="project-description">
+                  Asia’s Largest Residential Layout: Bengaluru’s 2400-Acre Mega Township developed under Karnataka Housing Board. 36,000 residential villa plots developed in collaboration with farmers with Cauvery water, 60-acre Sports Club, and STRRPA approval. Electronic A-Khata ready for immediate registration.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:var(--orange-bright);">Completed</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Township Size</span>
+                    <span class="spec-value">2,400 Acres</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Approval</span>
+                    <span class="spec-value">STRRPA / BBMP</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="khb-suryacity.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Layout Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="KHB Surya City Phase-4" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Completed 3: Nandi Urban City Devanahalli -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="250">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/nandi-urban-banner.jpg', alt: 'Nandi Urban City Entrance Banner' },
+                { src: 'assets/images/purple/urban-nandi-collage.jpg', alt: 'Nandi Urban City Parks & Amenities' },
+                { src: 'assets/images/purple/gallery-1.jpeg', alt: 'Nandi Urban City Avenue Trees' },
+                { src: 'assets/images/purple/master-plan.jpg', alt: 'Nandi Urban City Master Layout Plan' }
+              ], 'Airport Corridor • BIAAPA Approved', 'var(--orange)', 'Exclusive Launch Pricing')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Devanahalli, North Bengaluru (10 Mins to Airport)</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="nandi-urban-city.html">Nandi Urban City – Where Weekends Begin Every Day</a>
+                </h3>
+                <p class="project-description">
+                  Located in Devanahalli, North Bengaluru — Nandi Urban City is a serene 12-acre BIAAPA-approved plotted community, just minutes from Kempegowda International Airport and surrounded by Nandi Hills, offering the ideal blend of nature, connectivity, and ready infrastructure with 7 landscaped parks.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:var(--orange-bright);">Completed</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Land Extent</span>
+                    <span class="spec-value">12 Acres Gated</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Total Units</span>
+                    <span class="spec-value">147 Villa Plots</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="nandi-urban-city.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">View Master Plan &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Completed 4: Habulus Tranquil Neo Town -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="300">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/habulus-carasoul-1.jpg', alt: 'Habulus Tranquil Tower Facade' },
+                { src: 'assets/images/purple/habulus-tranquil.jpg', alt: 'Habulus Tranquil Campus' },
+                { src: 'assets/images/purple/gallery-1.jpg', alt: 'Habulus Tranquil Living Space' },
+                { src: 'assets/images/purple/habulus-location.jpg', alt: 'Habulus Tranquil Neo Town Route' }
+              ], 'Neo Town High-Rise • BDA Approved', 'var(--orange)', '₹90L Onwards • 2 & 3 BHK')}
+
               <div class="project-card-body">
                 <div class="project-location">
                   ${icons.mapPin}
@@ -303,16 +417,16 @@ const indexHtml = `<!DOCTYPE html>
                 </p>
                 <div class="project-specs-grid">
                   <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:var(--orange-bright);">Completed</span>
+                  </div>
+                  <div class="project-spec-item">
                     <span class="spec-label">Structure</span>
                     <span class="spec-value">B+S+16 Floors</span>
                   </div>
                   <div class="project-spec-item">
                     <span class="spec-label">Grand Club</span>
                     <span class="spec-value">25,000 Sq.Ft</span>
-                  </div>
-                  <div class="project-spec-item">
-                    <span class="spec-label">Technology</span>
-                    <span class="spec-value">MIVAN Formwork</span>
                   </div>
                 </div>
                 <div class="project-card-footer">
@@ -322,6 +436,97 @@ const indexHtml = `<!DOCTYPE html>
               </div>
             </div>
           </div>
+
+          <!-- =================================================================
+               SEGMENT 3: UPCOMING DEVELOPMENTS
+               ================================================================= -->
+
+          <!-- Upcoming 1: Sarjapur STRR Corridor Plotted Enclave -->
+          <div class="col-6" data-category="upcoming" data-aos="fade-up" data-aos-delay="100">
+            <span class="segment-header-pill upcoming">✦ Upcoming Launch</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-aerial-fields.png', alt: 'Sarjapur STRR Corridor Aerial Land Bank' },
+                { src: 'assets/images/user-plot-overview.png', alt: 'Sarjapur STRR Enclave Layout Model' },
+                { src: 'assets/images/plot-aerial-master.jpg', alt: 'Sarjapur STRR Plotted Development' },
+                { src: 'assets/images/plotting-infrastructure.jpg', alt: 'Future Infrastructure Preview' }
+              ], 'Upcoming BMRDA Layout', '#3b82f6', 'Pre-Launch Expression of Interest')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Sarjapur – Attibele STRR Express Corridor, Bengaluru</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="projects.html#upcoming">Aspire Palm Meadows – Sarjapur STRR Corridor</a>
+                </h3>
+                <p class="project-description">
+                  An upcoming 40-acre master-planned gated residential enclave strategically positioned along the Satellite Town Ring Road (STRR) and upcoming Swift City industrial corridor. Planned with 600+ demarcated villa sites, underground smart utilities, and extensive green tree cover.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:#60a5fa;">Upcoming</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Proposed Area</span>
+                    <span class="spec-value">40 Acres</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Expected Sanction</span>
+                    <span class="spec-value">BMRDA / STRRPA</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Sarjapur STRR Corridor (Pre-Launch)" style="font-size:0.85rem; padding:8px 18px; width:100%;">Register Pre-Launch EOI &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming 2: North Bengaluru Aerospace Plotted Hub -->
+          <div class="col-6" data-category="upcoming" data-aos="fade-up" data-aos-delay="200">
+            <span class="segment-header-pill upcoming">✦ Upcoming Launch</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-overview.png', alt: 'North Bangalore Aerospace Enclave' },
+                { src: 'assets/images/user-plot-aerial-fields.png', alt: 'KIADB Aerospace Corridor Land' },
+                { src: 'assets/images/plot-layout-avenue.jpg', alt: 'Aerospace Corridor Layout Design' },
+                { src: 'assets/images/user-plot-park-aerial.jpg', alt: 'Green Park Concept' }
+              ], 'Upcoming BIAAPA Sanctioned', '#3b82f6', 'Exclusive Pre-Booking')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>KIADB Aerospace & IT Park Corridor, Devanahalli</span>
+                </div>
+                <h3 class="project-card-title">
+                  <a href="projects.html#upcoming">North Bengaluru Aerospace Plotted Enclave</a>
+                </h3>
+                <p class="project-description">
+                  A high-conviction 25-acre plotted enclave tailored for IT, aviation, and aerospace professionals near Devanahalli SEZ and Kempegowda International Airport. Designed with sustainable solar avenue lighting, EV charging pods, and high capital growth vectors.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item">
+                    <span class="spec-label">Segment</span>
+                    <span class="spec-value" style="color:#60a5fa;">Upcoming</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Proposed Area</span>
+                    <span class="spec-value">25 Acres</span>
+                  </div>
+                  <div class="project-spec-item">
+                    <span class="spec-label">Airport Access</span>
+                    <span class="spec-value">8 Mins Direct</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="North Bengaluru Aerospace Hub (Pre-Launch)" style="font-size:0.85rem; padding:8px 18px; width:100%;">Register Pre-Launch EOI &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -546,12 +751,17 @@ const indexHtml = `<!DOCTYPE html>
           Ready to Secure Your Piece of Bengaluru’s Next Growth Story?
         </h2>
         <p style="color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem; font-size:1.05rem;">
-          Whether you seek government-backed plots in KHB Surya City, airport proximity in Nandi Urban City, or luxury high-rise living in Neo Town, we guide every milestone with integrity.
+          Whether you seek government-backed plots in KHB Surya City, airport proximity in Nandi Urban City, or boutique tranquility in Madhura Lotus on Kanakapura Road, we guide every milestone with integrity.
         </p>
+
         <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
           <button class="btn-primary" data-open-modal="visit" data-project-name="General Inquiry" style="padding:14px 34px; font-size:1rem;">
             Schedule Site Visit Today &rarr;
           </button>
+          <a href="tel:+919945380337" class="btn-secondary" style="padding:14px 30px;">
+            ${icons.phone}
+            <span>Call +91 99453 80337</span>
+          </a>
           <a href="contact.html" class="btn-secondary" style="padding:14px 30px;">
             Visit Corporate Office
           </a>
@@ -602,7 +812,7 @@ const aboutHtml = `<!DOCTYPE html>
               About ASPIRE HOUSING
             </h2>
             <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1.25rem;">
-              The journey started when we discussed reimagining the Real Estate space with new ways of working. Our common ethics and values laid the foundation of <strong>ASPIRE HOUSING’s</strong> value-oriented culture with a clear focus on bringing about transparency in the Real Estate sector.
+              The journey started when we discussed reimagining the Real Estate space with new ways of working. In strategic alliance with <strong>The Purple Palms</strong>, our common ethics and values laid the foundation of <strong>ASPIRE HOUSING’s</strong> value-oriented culture with a clear focus on bringing about transparency in the Real Estate sector.
             </p>
             <p style="color:var(--text-muted); font-size:1rem; line-height:1.8; margin-bottom:1.25rem;">
               The idea was to deliver more than just properties, it was about bringing solutions and experiences. The roadmap was to boost transparency and improve communication between all buyers or investors in the Real Estate industry. This would eventually lead to more informed decision-making. Since the early days, we have been working towards this broader goal.
@@ -736,8 +946,8 @@ const projectsHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects Portfolio | ASPIRE HOUSING — Master Development Directory</title>
-  <meta name="description" content="Explore Aspire Housing's premier real estate developments across Bengaluru: KHB Surya City Phase-4, Nandi Urban City, AP Township, and Habulus Tranquil.">
+  <title>Projects Portfolio | ASPIRE HOUSING — Completed, Ongoing & Upcoming Directory</title>
+  <meta name="description" content="Explore Aspire Housing's premier real estate developments across Bengaluru: Completed (Madhura Lotus, KHB Surya City, Nandi Urban, Habulus Tranquil), Ongoing (Amritha Varshini, AP Township), and Upcoming Enclaves.">
   <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/style.css">
@@ -754,16 +964,15 @@ const projectsHtml = `<!DOCTYPE html>
           Curated Residential Townships & Luxury Living.
         </h1>
         <p class="section-subtitle" style="max-width:800px;">
-          We believe smooth project approval processes are critical for our clients. Our team of experts handle end-to-end liaison, securing land conversion, zoning approvals, RERA registration, and occupancy certificates as and when required without the hassle of following up.
+          We believe smooth project approval processes are critical for our clients. In partnership with The Purple Palms, our team handles end-to-end regulatory approvals, securing BMRDA, STRRPA, BIAAPA, and RERA certifications so you invest with complete peace of mind.
         </p>
 
         <!-- Filter Tabs -->
         <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:2.5rem;">
-          <button class="filter-tab-btn btn-secondary active" data-filter="all" style="padding:8px 18px; font-size:0.85rem;">All Projects</button>
-          <button class="filter-tab-btn btn-secondary" data-filter="mega" style="padding:8px 18px; font-size:0.85rem;">Government Mega Townships</button>
-          <button class="filter-tab-btn btn-secondary" data-filter="airport" style="padding:8px 18px; font-size:0.85rem;">Airport / North Corridor</button>
-          <button class="filter-tab-btn btn-secondary" data-filter="ecity" style="padding:8px 18px; font-size:0.85rem;">Electronic City Corridors</button>
-          <button class="filter-tab-btn btn-secondary" data-filter="apartments" style="padding:8px 18px; font-size:0.85rem;">Ultra-Luxury High-Rise</button>
+          <button class="filter-tab-btn btn-secondary active" data-filter="all" style="padding:10px 20px; font-size:0.88rem;">All Developments</button>
+          <button class="filter-tab-btn btn-secondary" data-filter="completed" style="padding:10px 20px; font-size:0.88rem; color:var(--orange-bright);">★ Completed Projects (4)</button>
+          <button class="filter-tab-btn btn-secondary" data-filter="ongoing" style="padding:10px 20px; font-size:0.88rem; color:#10b981;">★ Ongoing Flagships (2)</button>
+          <button class="filter-tab-btn btn-secondary" data-filter="upcoming" style="padding:10px 20px; font-size:0.88rem; color:#60a5fa;">★ Upcoming Enclaves (2)</button>
         </div>
       </div>
     </section>
@@ -772,14 +981,18 @@ const projectsHtml = `<!DOCTYPE html>
     <section class="section">
       <div class="section-container">
         <div class="bento-grid">
-          <!-- 0. Amritha Varshini (New Flagship) -->
-          <div class="col-12" data-category="mega ecity plots" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+          
+          <!-- ONGOING 1: Amritha Varshini -->
+          <div class="col-12" data-category="ongoing" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
+            <span class="segment-header-pill ongoing">● Ongoing Master Township</span>
             <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
-              <div class="project-card-image-box" style="height:100%; min-height:280px;">
-                <img src="assets/images/plot-aerial-master.jpg" alt="Amritha Varshini 23-Acre BMRDA Plotted Development" class="project-card-img" style="height:100%; object-fit:cover;" />
-                <span class="project-badge-tag" style="background:#10b981;">BMRDA Approved • APA/LAO No. 142/2012-13</span>
-                <span class="project-price-tag">₹6,499 / sq.ft* • 23 Acres</span>
-              </div>
+              ${makeProjectSlider([
+                { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini 23-Acre Master Township' },
+                { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Luxury Villa Avenue' },
+                { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Plan' },
+                { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Architecture' }
+              ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+
               <div class="project-card-body" style="padding:2rem;">
                 <div class="project-location">
                   ${icons.mapPin}
@@ -790,9 +1003,9 @@ const projectsHtml = `<!DOCTYPE html>
                   Developed by Sri Sri Constructions, featuring 336 approved villa plots (30x40, 30x50, 40x60), independent luxury 2/3/4 BHK villas, apartments, 100 ft wide main road connecting to KHB Suryanagar Phase-III, and 6 landscaped parks.
                 </p>
                 <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:#10b981;">Ongoing</span></div>
                   <div class="project-spec-item"><span class="spec-label">Extent</span><span class="spec-value">23 Acres</span></div>
                   <div class="project-spec-item"><span class="spec-label">Sanctioned</span><span class="spec-value">336 Plots</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Status</span><span class="spec-value">Ready E-Khata</span></div>
                 </div>
                 <div class="project-card-footer" style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.2rem;">
                   <a href="amritha-varshini.html" class="btn-primary" style="font-size:0.85rem; padding:8px 18px;">Full Details & Master Plan &rarr;</a>
@@ -803,74 +1016,17 @@ const projectsHtml = `<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- 1. KHB Surya City Phase-4 -->
-          <div class="col-6" data-category="mega ecity" data-aos="fade-up" data-aos-delay="100">
+          <!-- ONGOING 2: AP Township -->
+          <div class="col-6" data-category="ongoing" data-aos="fade-up" data-aos-delay="100">
+            <span class="segment-header-pill ongoing">● Ongoing Development</span>
             <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-ground-real.jpg" alt="KHB Surya City Phase 4 Mega Plotted Township" class="project-card-img" />
-                <span class="project-badge-tag">Government Backed • KHB</span>
-                <span class="project-price-tag">From ₹46.80L* (₹3900/sq.ft)</span>
-              </div>
-              <div class="project-card-body">
-                <div class="project-location">
-                  ${icons.mapPin}
-                  <span>Jigani, Bannerghatta Road, South Bengaluru</span>
-                </div>
-                <h2 class="project-card-title"><a href="khb-suryacity.html">KHB Surya City Phase – 4</a></h2>
-                <p class="project-description">
-                  Asia’s Largest Residential Layout Bengaluru’s 2400-Acre Mega Township. 36,000 residential plots, modern infrastructure, and government trust. Developed under STRRPA approval in collaboration with farmers with Cauvery water connection and 60-acre sports club.
-                </p>
-                <div class="project-specs-grid">
-                  <div class="project-spec-item"><span class="spec-label">Area</span><span class="spec-value">2400 Acres</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Approval</span><span class="spec-value">STRRPA / BBMP</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Status</span><span class="spec-value">Ready To Register</span></div>
-                </div>
-                <div class="project-card-footer">
-                  <a href="khb-suryacity.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
-                  <button class="btn-primary" data-open-modal="visit" data-project-name="KHB Surya City Phase-4" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
-                </div>
-              </div>
-            </div>
-          </div>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/AP-Township.jpg', alt: 'AP Township Entrance & Greenery' },
+                { src: 'assets/images/purple/AP-Township-collage.png', alt: 'AP Township Master Collage' },
+                { src: 'assets/images/purple/IMG_20251123_105340-scaled.jpg', alt: 'AP Township Ground Avenue' },
+                { src: 'assets/images/purple/master-plan-and-key-amenities-scaled.jpg', alt: 'AP Township Master Plan & Amenities' }
+              ], 'BMRDA & RERA Approved', '#10b981', '30 Acres • 500 Plots')}
 
-          <!-- 2. Nandi Urban City Devanahalli -->
-          <div class="col-6" data-category="airport" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-gated-aerial.png" alt="Nandi Urban City Devanahalli Villa Plots" class="project-card-img" />
-                <span class="project-badge-tag">BIAAPA Approved</span>
-                <span class="project-price-tag">Exclusive Launch Pricing</span>
-              </div>
-              <div class="project-card-body">
-                <div class="project-location">
-                  ${icons.mapPin}
-                  <span>Devanahalli, North Bengaluru (Near Kempegowda Airport)</span>
-                </div>
-                <h2 class="project-card-title"><a href="nandi-urban-city.html">Nandi Urban City – Devanahalli</a></h2>
-                <p class="project-description">
-                  A serene 12-acre BIAAPA-approved plotted development, just minutes from Kempegowda International Airport and surrounded by Nandi Hills. Features 147 villa plots (1200–2400 sq.ft & 3000+ sq.ft mansion plots) with 7 landscaped parks and cycling track.
-                </p>
-                <div class="project-specs-grid">
-                  <div class="project-spec-item"><span class="spec-label">Land Size</span><span class="spec-value">12 Acres</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Total Units</span><span class="spec-value">147 Plots</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Airport Proximity</span><span class="spec-value">10 Mins Drive</span></div>
-                </div>
-                <div class="project-card-footer">
-                  <a href="nandi-urban-city.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
-                  <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. AP Township -->
-          <div class="col-6" data-category="ecity" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-master-plan-72.jpg" alt="AP Township Gated Plotted Community" class="project-card-img" />
-                <span class="project-badge-tag">BMRDA & RERA Approved</span>
-                <span class="project-price-tag">500 Premium Plots</span>
-              </div>
               <div class="project-card-body">
                 <div class="project-location">
                   ${icons.mapPin}
@@ -881,8 +1037,8 @@ const projectsHtml = `<!DOCTYPE html>
                   A BMRDA & RERA-approved 30-acre township featuring 500 premium plots. Designed with over 18,000 trees and 48% open green space, 8 themed parks, 50+ lifestyle amenities, clubhouse with swimming pool, mini theatre, and 30 & 40 ft concrete roads.
                 </p>
                 <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:#10b981;">Ongoing</span></div>
                   <div class="project-spec-item"><span class="spec-label">Township Size</span><span class="spec-value">30 Acres</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Amenities</span><span class="spec-value">50+ Lifestyle</span></div>
                   <div class="project-spec-item"><span class="spec-label">Approval</span><span class="spec-value">BMRDA / RERA</span></div>
                 </div>
                 <div class="project-card-footer">
@@ -893,14 +1049,116 @@ const projectsHtml = `<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- 4. Habulus Tranquil -->
-          <div class="col-6" data-category="apartments ecity" data-aos="fade-up" data-aos-delay="200">
+          <!-- COMPLETED 1: Madhura Lotus -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="150">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
             <div class="project-card" data-tilt>
-              <div class="project-card-image-box">
-                <img src="assets/images/user-plot-park-layout.jpg" alt="Habulus Tranquil 5-Acre Master Campus" class="project-card-img" />
-                <span class="project-badge-tag">RERA & BDA Approved</span>
-                <span class="project-price-tag">₹90L Onwards • 2 & 3 BHK</span>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-pin-land.jpg', alt: 'Madhura Lotus Aerial Layout' },
+                { src: 'assets/images/user-plot-park-layout.jpg', alt: 'Madhura Lotus Park Layout' },
+                { src: 'assets/images/user-plot-ground-real.jpg', alt: 'Madhura Lotus Demarcated Plots' },
+                { src: 'assets/images/plot-layout-avenue.jpg', alt: 'Madhura Lotus Paved Internal Avenue' }
+              ], 'BMRDA Approved Layout', 'var(--orange)', 'From ₹62.39L* • 6 Acres')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Kaggalipura, Kanakapura Road (NH-948), Bengaluru South</span>
+                </div>
+                <h2 class="project-card-title"><a href="madhura-lotus.html">Madhura Lotus – 6-Acre Gated Community</a></h2>
+                <p class="project-description">
+                  A completed 6-acre BMRDA-approved plotted layout with 90 exclusive villa plots. Located on NH-948 next to DAV Public School, 10 mins from Silk Institute Metro Station with asphalt roads, individual water lines, and Electronic A-Khata.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:var(--orange-bright);">Completed</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Total Units</span><span class="spec-value">90 Villa Plots</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Metro Distance</span><span class="spec-value">10 Mins (Silk Inst)</span></div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="madhura-lotus.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Madhura Lotus Kaggalipura" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
               </div>
+            </div>
+          </div>
+
+          <!-- COMPLETED 2: KHB Surya City Phase-4 -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="200">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/suryacity-1.jpg', alt: 'KHB Surya City Phase 4 Entrance & Layout' },
+                { src: 'assets/images/purple/khb-1-1.jpg', alt: 'KHB Surya City Phase 4 Master Avenue' },
+                { src: 'assets/images/purple/Gallery-1.jpg', alt: 'KHB Surya City Phase 4 Infrastructure' },
+                { src: 'assets/images/user-plot-ground-real.jpg', alt: 'KHB Surya City Demarcated Plots' }
+              ], 'Government Backed • KHB & STRRPA', 'var(--orange)', 'From ₹46.80L* (₹3900/sq.ft)')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Jigani, Bannerghatta Road, South Bengaluru</span>
+                </div>
+                <h2 class="project-card-title"><a href="khb-suryacity.html">KHB Surya City Phase – 4</a></h2>
+                <p class="project-description">
+                  Asia’s Largest Residential Layout Bengaluru’s 2400-Acre Mega Township. 36,000 residential plots, modern infrastructure, and government trust. Developed under STRRPA approval in collaboration with farmers with Cauvery water connection and 60-acre sports club.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:var(--orange-bright);">Completed</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Area</span><span class="spec-value">2400 Acres</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Approval</span><span class="spec-value">STRRPA / BBMP</span></div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="khb-suryacity.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="KHB Surya City Phase-4" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPLETED 3: Nandi Urban City Devanahalli -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="250">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/nandi-urban-banner.jpg', alt: 'Nandi Urban City Entrance Banner' },
+                { src: 'assets/images/purple/urban-nandi-collage.jpg', alt: 'Nandi Urban City Parks & Amenities' },
+                { src: 'assets/images/purple/gallery-1.jpeg', alt: 'Nandi Urban City Avenue Trees' },
+                { src: 'assets/images/purple/master-plan.jpg', alt: 'Nandi Urban City Master Layout Plan' }
+              ], 'BIAAPA Approved', 'var(--orange)', 'Exclusive Launch Pricing')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Devanahalli, North Bengaluru (Near Kempegowda Airport)</span>
+                </div>
+                <h2 class="project-card-title"><a href="nandi-urban-city.html">Nandi Urban City – Devanahalli</a></h2>
+                <p class="project-description">
+                  A serene 12-acre BIAAPA-approved plotted development, just minutes from Kempegowda International Airport and surrounded by Nandi Hills. Features 147 villa plots (1200–2400 sq.ft & 3000+ sq.ft mansion plots) with 7 landscaped parks and cycling track.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:var(--orange-bright);">Completed</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Land Size</span><span class="spec-value">12 Acres</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Total Units</span><span class="spec-value">147 Plots</span></div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="nandi-urban-city.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Nandi Urban City Devanahalli" style="font-size:0.85rem; padding:8px 18px;">Book Site Visit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPLETED 4: Habulus Tranquil Neo Town -->
+          <div class="col-6" data-category="completed" data-aos="fade-up" data-aos-delay="300">
+            <span class="segment-header-pill completed">✓ Completed Development</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/purple/habulus-carasoul-1.jpg', alt: 'Habulus Tranquil Tower Facade' },
+                { src: 'assets/images/purple/habulus-tranquil.jpg', alt: 'Habulus Tranquil Campus' },
+                { src: 'assets/images/purple/gallery-1.jpg', alt: 'Habulus Tranquil Living Space' },
+                { src: 'assets/images/purple/habulus-location.jpg', alt: 'Habulus Tranquil Neo Town Route' }
+              ], 'RERA & BDA Approved', 'var(--orange)', '₹90L Onwards • 2 & 3 BHK')}
+
               <div class="project-card-body">
                 <div class="project-location">
                   ${icons.mapPin}
@@ -911,9 +1169,9 @@ const projectsHtml = `<!DOCTYPE html>
                   Spread across 5 Acres of Land, Habulus Tranquil is a premium gated community featuring 4 elegant residential towers of B+S+16 floors, 496 units, 25,000 sq.ft clubhouse, MIVAN aluminum formwork, 100% Vastu compliance, and zero common walls.
                 </p>
                 <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:var(--orange-bright);">Completed</span></div>
                   <div class="project-spec-item"><span class="spec-label">Structure</span><span class="spec-value">B+S+16 Floors</span></div>
                   <div class="project-spec-item"><span class="spec-label">Clubhouse</span><span class="spec-value">25,000 Sq.Ft</span></div>
-                  <div class="project-spec-item"><span class="spec-label">Configuration</span><span class="spec-value">2, 2.5 & 3 BHK</span></div>
                 </div>
                 <div class="project-card-footer">
                   <a href="habulus-tranquil.html" class="btn-secondary" style="font-size:0.85rem; padding:8px 18px;">Full Details &rarr;</a>
@@ -922,6 +1180,71 @@ const projectsHtml = `<!DOCTYPE html>
               </div>
             </div>
           </div>
+
+          <!-- UPCOMING 1: Sarjapur STRR Corridor -->
+          <div class="col-6" data-category="upcoming" data-aos="fade-up" data-aos-delay="100">
+            <span class="segment-header-pill upcoming">✦ Upcoming Launch</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-aerial-fields.png', alt: 'Sarjapur STRR Corridor Aerial Land Bank' },
+                { src: 'assets/images/user-plot-overview.png', alt: 'Sarjapur STRR Enclave Layout Model' },
+                { src: 'assets/images/plot-aerial-master.jpg', alt: 'Sarjapur STRR Plotted Development' },
+                { src: 'assets/images/plotting-infrastructure.jpg', alt: 'Future Infrastructure Preview' }
+              ], 'Upcoming BMRDA Layout', '#3b82f6', 'Pre-Launch EOI')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>Sarjapur – Attibele STRR Express Corridor, Bengaluru</span>
+                </div>
+                <h2 class="project-card-title"><a href="projects.html#upcoming">Aspire Palm Meadows – STRR Corridor</a></h2>
+                <p class="project-description">
+                  An upcoming 40-acre master-planned gated residential enclave strategically positioned along the Satellite Town Ring Road (STRR). Planned with 600+ demarcated villa sites, underground smart utilities, and extensive green tree cover.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:#60a5fa;">Upcoming</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Area</span><span class="spec-value">40 Acres</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Status</span><span class="spec-value">Pre-Launch EOI</span></div>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="Sarjapur STRR Corridor (Pre-Launch)" style="font-size:0.85rem; padding:8px 18px; width:100%;">Register Pre-Launch EOI &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UPCOMING 2: North Bengaluru Aerospace Plotted Hub -->
+          <div class="col-6" data-category="upcoming" data-aos="fade-up" data-aos-delay="200">
+            <span class="segment-header-pill upcoming">✦ Upcoming Launch</span>
+            <div class="project-card" data-tilt>
+              ${makeProjectSlider([
+                { src: 'assets/images/user-plot-overview.png', alt: 'North Bangalore Aerospace Enclave' },
+                { src: 'assets/images/user-plot-aerial-fields.png', alt: 'KIADB Aerospace Corridor Land' },
+                { src: 'assets/images/plot-layout-avenue.jpg', alt: 'Aerospace Corridor Layout Design' },
+                { src: 'assets/images/user-plot-park-aerial.jpg', alt: 'Green Park Concept' }
+              ], 'Upcoming BIAAPA Sanctioned', '#3b82f6', 'Pre-Booking Phase')}
+
+              <div class="project-card-body">
+                <div class="project-location">
+                  ${icons.mapPin}
+                  <span>KIADB Aerospace & IT Park Corridor, Devanahalli</span>
+                </div>
+                <h2 class="project-card-title"><a href="projects.html#upcoming">North Bengaluru Aerospace Enclave</a></h2>
+                <p class="project-description">
+                  A high-conviction 25-acre plotted enclave tailored for IT, aviation, and aerospace professionals near Devanahalli SEZ and Kempegowda International Airport. Designed with sustainable solar avenue lighting and EV charging pods.
+                </p>
+                <div class="project-specs-grid">
+                  <div class="project-spec-item"><span class="spec-label">Segment</span><span class="spec-value" style="color:#60a5fa;">Upcoming</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Area</span><span class="spec-value">25 Acres</span></div>
+                  <div class="project-spec-item"><span class="spec-label">Airport</span><span class="spec-value">8 Mins Direct</span></div>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-primary" data-open-modal="visit" data-project-name="North Bengaluru Aerospace Hub (Pre-Launch)" style="font-size:0.85rem; padding:8px 18px; width:100%;">Register Pre-Launch EOI &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -936,4 +1259,4 @@ fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtml, 'utf8');
 fs.writeFileSync(path.join(__dirname, 'about.html'), aboutHtml, 'utf8');
 fs.writeFileSync(path.join(__dirname, 'projects.html'), projectsHtml, 'utf8');
 
-console.log('Part 1 updated with SVG icons and zero emojis.');
+console.log('Part 1 updated with Who We Are/What We Are, 3 segments, and scrolling image carousels.');

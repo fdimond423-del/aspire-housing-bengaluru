@@ -1857,3 +1857,161 @@ img {
   visibility: visible !important;
 }
 
+
+/* ==========================================================================
+   DYNAMIC PROJECT IMAGE SLIDER / SCROLLING REEL
+   ========================================================================== */
+.project-card-image-box.project-slider {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background: #0a0d14;
+}
+
+.project-slides-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.project-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.project-card:hover .project-slide.active {
+  transform: scale(1.06);
+}
+
+.slider-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(10, 13, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.25s ease, transform 0.2s ease;
+}
+
+.project-card:hover .slider-arrow-btn {
+  opacity: 1;
+}
+
+.slider-arrow-btn:hover {
+  background: var(--orange);
+  color: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow-btn.prev {
+  left: 10px;
+}
+
+.slider-arrow-btn.next {
+  right: 10px;
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  width: 18px;
+  border-radius: 6px;
+  background: var(--orange-bright);
+  box-shadow: 0 0 8px rgba(255, 87, 34, 0.8);
+}
+
+.slider-counter-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(10, 14, 22, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 9;
+  letter-spacing: 0.5px;
+}
+
+/* Segment Pill Badge */
+.segment-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.segment-header-pill.ongoing {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+}
+.segment-header-pill.completed {
+  background: rgba(255, 87, 34, 0.12);
+  border: 1px solid rgba(255, 87, 34, 0.35);
+  color: var(--orange-bright);
+}
+.segment-header-pill.upcoming {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #60a5fa;
+}

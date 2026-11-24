@@ -1484,6 +1484,357 @@ const habulusHtml = `<!DOCTYPE html>
 </html>`;
 
 // Write them to workspace
+
+const madhuraHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhura Lotus Kaggalipura Kanakapura Road | ASPIRE HOUSING — 6-Acre BMRDA Villa Plots</title>
+  <meta name="description" content="Madhura Lotus by The Purple Palms - 6-Acre BMRDA-approved gated villa community in Kaggalipura on Kanakapura Main Road (NH-948), 10 minutes to Silk Institute Metro. 90 exclusive villa plots ready for immediate registration.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  ${getHeader('madhura')}
+
+  <main style="padding-top:100px;">
+    <!-- Project Hero Banner -->
+    <section class="section" style="padding-bottom:3rem; border-bottom:1px solid var(--border-subtle); position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; opacity:0.18; pointer-events:none;">
+        <img src="assets/images/user-plot-pin-land.jpg" alt="Madhura Lotus Background" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="section-container" style="position:relative; z-index:2;" data-aos="fade-up">
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+          <span class="project-badge-tag" style="position:static; background:#10b981;">BMRDA Approved Layout</span>
+          <span class="project-badge-tag" style="position:static; background:#3b82f6;">Completed & Ready to Register</span>
+          <span class="project-badge-tag" style="position:static; background:var(--orange);">Electronic A-Khata</span>
+        </div>
+        <h1 class="section-title" style="font-size:clamp(2.2rem, 4.5vw, 3.5rem); max-width:900px;">
+          Madhura Lotus — 6-Acre BMRDA Gated Villa Community
+        </h1>
+        <div style="display:flex; align-items:center; gap:8px; color:var(--text-muted); font-size:1.05rem; margin-top:0.5rem; margin-bottom:1.5rem;">
+          ${icons.mapPin}
+          <span>Kaggalipura, Off Kanakapura Main Road (NH-948), Bengaluru South</span>
+        </div>
+        <p class="section-subtitle" style="max-width:820px; font-size:1.15rem; line-height:1.8;">
+          Marketed in strategic partnership with <strong>The Purple Palms</strong>, Madhura Lotus is a meticulously crafted 6-acre gated residential plotted enclave featuring only 90 exclusive villa plots. Positioned directly along the high-growth Kanakapura corridor, adjacent to DAV Public School and just 10 minutes from Silk Institute Metro Station, it offers peaceful green living combined with effortless city connectivity.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:2rem;">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="Madhura Lotus Kaggalipura" style="padding:14px 32px; font-size:1rem;">
+            Schedule Private Site Visit &rarr;
+          </button>
+          <a href="tel:+919945380337" class="btn-secondary" style="padding:14px 28px; font-size:1rem;">
+            ${icons.phone}
+            <span>Call +91 99453 80337</span>
+          </a>
+          <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20please%20share%20the%20cost%20sheet%20and%20plot%20availability%20for%20Madhura%20Lotus%20Kanakapura%20Road." target="_blank" class="btn-secondary" style="padding:14px 24px; font-size:1rem; color:#25d366; border-color:rgba(37,211,102,0.4);">
+            ${icons.whatsapp}
+            <span>WhatsApp Details</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Stats Row -->
+    <section class="section" style="padding:3.5rem 0; background:var(--bg-main); border-bottom:1px solid var(--border-subtle);">
+      <div class="section-container">
+        <div class="hero-stats-row" style="margin-top:0;">
+          <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="hero-stat-number"><span data-counter="6" data-suffix=" Acres">6 Acres</span></div>
+            <div class="hero-stat-label">Total Gated Land Extent</div>
+          </div>
+          <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-stat-number"><span data-counter="90" data-suffix=" Plots">90</span></div>
+            <div class="hero-stat-label">Exclusive Sanctioned Plots</div>
+          </div>
+          <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="hero-stat-number"><span class="accent">₹</span><span data-counter="62" data-suffix=".39L*">62.39L*</span></div>
+            <div class="hero-stat-label">Plots Starting Price (1200 sq.ft)</div>
+          </div>
+          <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="hero-stat-number"><span data-counter="10" data-suffix=" Mins">10 Mins</span></div>
+            <div class="hero-stat-label">Silk Institute Metro Station</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview & Gallery Bento -->
+    <section class="section">
+      <div class="section-container">
+        <div class="bento-grid" style="align-items:center;">
+          <div class="col-7" data-aos="fade-right">
+            <span class="section-tag">Serene Plotted Living</span>
+            <h2 class="section-title">A Boutique Plotted Haven with Seamless Urban Reach</h2>
+            <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.8; margin-bottom:1.25rem;">
+              Unlike overcrowded mega-layouts, <strong>Madhura Lotus</strong> is planned as an intimate, low-density community of just 90 residential villa sites. Designed for families and discerning investors seeking a pollution-free atmosphere surrounded by lush green coconut groves and fresh air, while maintaining instant connectivity to South Bengaluru's commercial centers.
+            </p>
+            <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.8; margin-bottom:1.5rem;">
+              Every plot is demarcated with clear boundary stones, equipped with individual water connection lines, and supported by wide asphalted internal avenues. With full BMRDA sanction and clear titles, buyers enjoy complete safety, seamless bank loan eligibility, and instant registration.
+            </p>
+
+            <div class="project-specs-grid" style="grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));">
+              <div class="project-spec-item">
+                <span class="spec-label">Approval Authority</span>
+                <span class="spec-value" style="color:var(--orange-bright);">BMRDA Sanctioned</span>
+              </div>
+              <div class="project-spec-item">
+                <span class="spec-label">Khata Status</span>
+                <span class="spec-value">Electronic A-Khata</span>
+              </div>
+              <div class="project-spec-item">
+                <span class="spec-label">Bank Approvals</span>
+                <span class="spec-value">SBI, HDFC, ICICI, LIC</span>
+              </div>
+              <div class="project-spec-item">
+                <span class="spec-label">Project Status</span>
+                <span class="spec-value" style="color:#10b981;">Completed / Ready to Move</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5" data-aos="fade-left">
+            <div class="glass-card" data-tilt style="padding:0; overflow:hidden;">
+              <img src="assets/images/user-plot-pin-land.jpg" alt="Madhura Lotus Ground Overview" style="width:100%; height:400px; object-fit:cover;" class="zoomable-plan-img" data-caption="Madhura Lotus 6-Acre Layout Overview" />
+              <div style="padding:1.25rem; background:rgba(12,15,22,0.95);">
+                <div style="font-size:1.1rem; font-weight:700; color:#fff;">Madhura Lotus Ground Demarcation</div>
+                <p style="font-size:0.85rem; color:var(--orange-bright); margin-top:2px;">Completed layout with paved avenues, individual water connections & boundary curbstones</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout & Plot Configurations Section -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Custom Villa Dimensions</span>
+          <h2 class="section-title">Plot Sizes & Living Configurations</h2>
+          <p class="section-subtitle">
+            Thoughtfully planned plot configurations allowing you to construct bespoke independent duplexes, triplex villas, or low-rise private sanctuaries.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card" data-tilt style="height:100%; border-top:3px solid var(--orange);">
+              <span class="project-badge-tag" style="position:static; margin-bottom:1rem; display:inline-block; background:rgba(255,87,34,0.15); color:var(--orange-bright);">Most Popular</span>
+              <h3 style="font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:0.5rem;">30 x 40 Ft</h3>
+              <div style="font-size:1.1rem; color:var(--text-dim); margin-bottom:1rem;">1,200 Sq.Ft Villa Plot</div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; margin-bottom:1.5rem;">
+                Ideal for contemporary 3 BHK independent villas with private parking and terrace gardens. Optimized for maximum space efficiency and high rental yields.
+              </p>
+              <div style="padding-top:1rem; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.85rem; color:var(--text-dim);">Indicative Pricing:</span>
+                <span style="font-weight:700; color:var(--orange-bright);">From ₹62.39 Lakhs*</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card" data-tilt style="height:100%; border-top:3px solid var(--orange-bright);">
+              <span class="project-badge-tag" style="position:static; margin-bottom:1rem; display:inline-block; background:rgba(16,185,129,0.15); color:#10b981;">Spacious Living</span>
+              <h3 style="font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:0.5rem;">30 x 50 Ft</h3>
+              <div style="font-size:1.1rem; color:var(--text-dim); margin-bottom:1rem;">1,500 Sq.Ft Villa Plot</div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; margin-bottom:1.5rem;">
+                Generous frontage and depth for expansive 4 BHK luxury duplex homes with internal courtyards, double-height living areas, and home theater space.
+              </p>
+              <div style="padding-top:1rem; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.85rem; color:var(--text-dim);">Indicative Pricing:</span>
+                <span style="font-weight:700; color:var(--orange-bright);">From ₹77.90 Lakhs*</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card" data-tilt style="height:100%; border-top:3px solid #3b82f6;">
+              <span class="project-badge-tag" style="position:static; margin-bottom:1rem; display:inline-block; background:rgba(59,130,246,0.15); color:#60a5fa;">Exclusive Mansion</span>
+              <h3 style="font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:0.5rem;">40 x 50+ Ft</h3>
+              <div style="font-size:1.1rem; color:var(--text-dim); margin-bottom:1rem;">2,000+ Sq.Ft Custom Plots</div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; margin-bottom:1.5rem;">
+                Grand corner and park-facing premium plots designed for architectural landmark residences with swimming pool, landscaped lawn, and servant quarters.
+              </p>
+              <div style="padding-top:1rem; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.85rem; color:var(--text-dim);">Indicative Pricing:</span>
+                <span style="font-weight:700; color:var(--orange-bright);">On Request</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure & Amenities Bento -->
+    <section class="section">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Ready Infrastructure</span>
+          <h2 class="section-title">Engineered for Lasting Reliability</h2>
+          <p class="section-subtitle">
+            Madhura Lotus features complete, ready-to-use physical and civic infrastructure constructed to strict BMRDA development benchmarks.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.road}</div>
+              <h3 class="pillar-title">Paved Blacktop Roads</h3>
+              <p class="pillar-desc">Wide internal blacktop asphalt roadways with concrete curbstones, pedestrian walkways, and smooth stormwater runoff camber.</p>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.water}</div>
+              <h3 class="pillar-title">Individual Water Lines</h3>
+              <p class="pillar-desc">Direct water connection point provided to the boundary of every single plot from centralized borewell network and overhead reservoir.</p>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.electricity}</div>
+              <h3 class="pillar-title">Underground Electricity</h3>
+              <p class="pillar-desc">Safe underground electrical cabling, transformer stations, and automated LED avenue lighting across all streets.</p>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.kids}</div>
+              <h3 class="pillar-title">Children's Play Park</h3>
+              <p class="pillar-desc">Safe, landscaped recreational play zone equipped with swings, slides, multi-play activity stations, and soft rubberized flooring.</p>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.running}</div>
+              <h3 class="pillar-title">Jogging & Walking Track</h3>
+              <p class="pillar-desc">Dedicated perimeter fitness pathways lined with flowering trees and greenery for morning walks and healthy lifestyle.</p>
+            </div>
+          </div>
+
+          <div class="col-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="pillar-card" data-tilt>
+              <div class="pillar-icon-box">${icons.shieldCheck}</div>
+              <h3 class="pillar-title">24/7 Gated Security</h3>
+              <p class="pillar-desc">Grand entrance portal with security kiosk, RFID boom barriers, CCTV surveillance, and full perimeter compound boundary.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Corridor Connectivity -->
+    <section class="section" style="background:var(--bg-main);">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Strategic South Bengaluru Location</span>
+          <h2 class="section-title">Prime Connectivity on Kanakapura Road (NH-948)</h2>
+          <p class="section-subtitle">
+            Kaggalipura represents the sweet spot of Kanakapura Road: clean air and zero city congestion, yet only minutes away from the metro line and key expressways.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="col-6" data-aos="fade-right">
+            <div class="glass-card" style="height:100%;">
+              <h3 style="font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:1.5rem; display:flex; align-items:center; gap:8px;">
+                ${icons.compass}
+                <span>Travel Times & Proximity Hubs</span>
+              </h3>
+              <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">DAV Public School</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">Adjacent (200m)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">Silk Institute Metro Station (Green Line)</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">10 Mins (6.8 Km)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">NICE Road Kanakapura Interchange</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">8 Mins (5 Km)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">Art of Living International Center</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">5 Mins (3 Km)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">Electronic City (via NICE Road)</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">25 Mins</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <span style="color:#fff; font-weight:600;">Banashankari & JP Nagar Metro</span>
+                  <span style="color:var(--orange-bright); font-weight:700;">20 Mins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6" data-aos="fade-left">
+            <div class="glass-card" style="height:100%;">
+              <h3 style="font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:1rem; display:flex; align-items:center; gap:8px;">
+                ${icons.building}
+                <span>Social Infrastructure & Schools</span>
+              </h3>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">
+                Surrounded by prestigious educational institutions including Kumaran's Children's Home, Edify School, National Public School, and Sri Sri Ravishankar Vidya Mandir. Top-tier medical care is accessible at BGS Gleneagles Global Hospital and Apollo Hospital Bannerghatta Road.
+              </p>
+              <div style="background:rgba(255,87,34,0.08); border-radius:12px; padding:1.25rem; border:1px solid var(--orange-border);">
+                <div style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:4px;">Appreciation Potential</div>
+                <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+                  With NH-948 widening, peripheral ring connectivity, and the expansion of the Silk Institute Metro line, Kanakapura Road has delivered consistent 18-22% annual capital appreciation for legally cleared BMRDA layouts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Site Visit Booking & Contact -->
+    <section class="section" style="border-top:1px solid var(--border-subtle);">
+      <div class="section-container" style="text-align:center;" data-aos="zoom-in">
+        <span class="section-tag">Direct Developer Representation</span>
+        <h2 class="section-title" style="max-width:700px; margin:0 auto 1.5rem;">
+          Reserve Your Villa Plot at Madhura Lotus
+        </h2>
+        <p style="color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem; font-size:1.05rem;">
+          Only limited plots remain available in this boutique 90-unit layout. Contact our dedicated advisory desk to inspect original approvals, review site availability, and schedule your guided on-site visit.
+        </p>
+
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <button class="btn-primary" data-open-modal="visit" data-project-name="Madhura Lotus Kaggalipura" style="padding:14px 34px; font-size:1rem;">
+            Book On-Site Inspection &rarr;
+          </button>
+          <a href="tel:+919945380337" class="btn-secondary" style="padding:14px 30px;">
+            ${icons.phone}
+            <span>Call +91 99453 80337</span>
+          </a>
+          <a href="https://wa.me/919945380337?text=Hi%20Aspire%20Housing,%20I%20am%20interested%20in%20visiting%20Madhura%20Lotus%20on%20Kanakapura%20Road." target="_blank" class="btn-secondary" style="padding:14px 26px; color:#25d366; border-color:rgba(37,211,102,0.4);">
+            ${icons.whatsapp}
+            <span>WhatsApp Lead Desk</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  ${getFooter()}
+</body>
+</html>`;
+
+
+
+fs.writeFileSync(path.join(__dirname, 'madhura-lotus.html'), madhuraHtml, 'utf8');
 fs.writeFileSync(path.join(__dirname, 'amritha-varshini.html'), amrithaHtml, 'utf8');
 fs.writeFileSync(path.join(__dirname, 'khb-suryacity.html'), khbHtml, 'utf8');
 fs.writeFileSync(path.join(__dirname, 'nandi-urban-city.html'), nandiHtml, 'utf8');

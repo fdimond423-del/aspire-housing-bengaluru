@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModalScheduler();
   initPlanLightbox();
   initPropertyFilter();
+  initProjectSliders();
   initScrollAnimations();
   initAOS();
   init3DCardTilt();
@@ -579,5 +580,116 @@ function initPlanLightbox() {
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeLightbox();
+  });
+}
+
+
+/* ==========================================================================
+   DYNAMIC PROJECT SLIDER ENGINE (AUTO-SCROLLING IMAGES)
+   ========================================================================== */
+function initProjectSliders() {
+  const sliders = document.querySelectorAll('.project-slider');
+  sliders.forEach((slider, sliderIdx) => {
+    const slides = slider.querySelectorAll('.project-slide');
+    const dots = slider.querySelectorAll('.slider-dot');
+    const prevBtn = slider.querySelector('.slider-arrow-btn.prev');
+    const nextBtn = slider.querySelector('.slider-arrow-btn.next');
+    const counter = slider.querySelector('.slider-counter-tag');
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    let isHovered = false;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
+
+      slides.forEach((slide, i) => {
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      if (dots && dots.length) {
+        dots.forEach((dot, i) => {
+          if (i === currentIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      if (counter) {
+        counter.textContent = (currentIndex + 1) + ' / ' + slides.length;
+      }
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      timer = setInterval(() => {
+        if (!isHovered) {
+          goToSlide(currentIndex + 1);
+        }
+      }, 3800 + (sliderIdx % 4) * 600);
+    }
+
+    function stopAutoSlide() {
+      if (timer) clearInterval(timer);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToSlide(currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToSlide(currentIndex + 1);
+      });
+    }
+
+    dots.forEach((dot, dotIdx) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        goToSlide(dotIdx);
+      });
+    });
+
+    slider.addEventListener('mouseenter', () => { isHovered = true; });
+    slider.addEventListener('mouseleave', () => { isHovered = false; });
+
+    // Touch swipe support
+    let startX = 0;
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isHovered = true;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) goToSlide(currentIndex + 1);
+        else goToSlide(currentIndex - 1);
+      }
+      setTimeout(() => { isHovered = false; }, 2000);
+    }, { passive: true });
+
+    // Stagger initial activation slightly
+    setTimeout(() => {
+      startAutoSlide();
+    }, 400 + (sliderIdx % 4) * 500);
   });
 }
