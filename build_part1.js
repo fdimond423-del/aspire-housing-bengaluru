@@ -4,9 +4,10 @@ const { getHeader, getFooter, icons } = require('./templates');
 
 // Helper to generate a project slider image box
 function makeProjectSlider(images, badgeText, badgeBg, priceText) {
-  const slidesHtml = images.map((img, i) => 
-    `<img src="${img.src}" alt="${img.alt}" class="project-slide ${i === 0 ? 'active' : ''}" />`
-  ).join('\n                ');
+  const slidesHtml = images.map((img, i) => {
+    const isPlan = /layout|plan|blueprint|drawing/i.test(img.src) || /plan|layout/i.test(img.alt);
+    return `<img src="${img.src}" alt="${img.alt}" class="project-slide ${isPlan ? 'plan-fit' : ''} ${i === 0 ? 'active' : ''}" />`;
+  }).join('\n                ');
 
   const dotsHtml = images.map((_, i) => 
     `<span class="slider-dot ${i === 0 ? 'active' : ''}"></span>`
@@ -17,6 +18,7 @@ function makeProjectSlider(images, badgeText, badgeBg, priceText) {
                 <div class="project-slides-track">
                 ${slidesHtml}
                 </div>
+                <button class="slider-fullscreen-btn" type="button" title="View Full Size High-Res Blueprint">⛶ Full Size</button>
                 <button class="slider-arrow-btn prev" aria-label="Previous Image">&lsaquo;</button>
                 <button class="slider-arrow-btn next" aria-label="Next Image">&rsaquo;</button>
                 <div class="slider-indicators">
@@ -167,15 +169,17 @@ const indexHtml = `<!DOCTYPE html>
           <!-- Ongoing 1: Amritha Varshini (Flagship 23-Acre BMRDA Layout) -->
           <div class="col-12" data-category="ongoing" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
             <span class="segment-header-pill ongoing">● Ongoing Master Township</span>
-            <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
-              ${makeProjectSlider([
-                { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini Gated Entrance' },
-                { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Avenue & Villas' },
-                { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Plan' },
-                { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Architecture' }
-              ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+            <div class="project-card" data-tilt style="display:flex; flex-direction:column; overflow:hidden;">
+              <div style="width:100%;">
+                ${makeProjectSlider([
+                  { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Master Plan' },
+                  { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini Grand Gated Entrance' },
+                  { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Luxury Villa Avenue' },
+                  { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Styles & Living Choices' }
+                ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+              </div>
               
-              <div class="project-card-body" style="padding:2rem;">
+              <div class="project-card-body" style="padding:2.2rem 2.5rem;">
                 <div class="project-location">
                   ${icons.mapPin}
                   <span>Guddahatti – Attibele, Beside KHB Suryacity Phase-3, Bengaluru</span>
@@ -985,15 +989,17 @@ const projectsHtml = `<!DOCTYPE html>
           <!-- ONGOING 1: Amritha Varshini -->
           <div class="col-12" data-category="ongoing" data-aos="fade-up" data-aos-delay="50" style="margin-bottom:1.5rem;">
             <span class="segment-header-pill ongoing">● Ongoing Master Township</span>
-            <div class="project-card" data-tilt style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));">
-              ${makeProjectSlider([
-                { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini 23-Acre Master Township' },
-                { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Luxury Villa Avenue' },
-                { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Plan' },
-                { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Architecture' }
-              ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+            <div class="project-card" data-tilt style="display:flex; flex-direction:column; overflow:hidden;">
+              <div style="width:100%;">
+                ${makeProjectSlider([
+                  { src: 'assets/images/amritha-layout-clean.jpg', alt: 'Amritha Varshini 336 Approved Sites Master Plan' },
+                  { src: 'assets/images/amritha-hero-render.jpg', alt: 'Amritha Varshini Grand Gated Entrance' },
+                  { src: 'assets/images/amritha-villa-avenue-render.jpg', alt: 'Amritha Varshini Luxury Villa Avenue' },
+                  { src: 'assets/images/amritha-living-choices.jpg', alt: 'Amritha Varshini Villa Styles & Living Choices' }
+                ], 'BMRDA Approved • APA/LAO No. 142/2012-13', '#10b981', '₹6,499 / sq.ft* • 23 Acres')}
+              </div>
 
-              <div class="project-card-body" style="padding:2rem;">
+              <div class="project-card-body" style="padding:2.2rem 2.5rem;">
                 <div class="project-location">
                   ${icons.mapPin}
                   <span>Guddahatti – Attibele, Adjacent to KHB Suryacity Phase-3</span>

@@ -667,6 +667,38 @@ function initProjectSliders() {
       });
     });
 
+    // Full Size trigger button
+    const fsBtn = slider.querySelector('.slider-fullscreen-btn');
+    if (fsBtn) {
+      fsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openSlideLightbox(currentIndex);
+      });
+    }
+
+    // Clicking anywhere on active slide opens full-size lightbox
+    slider.addEventListener('click', (e) => {
+      if (e.target.closest('.slider-arrow-btn') || e.target.closest('.slider-dot') || e.target.closest('.slider-fullscreen-btn') || e.target.closest('.project-badge-tag') || e.target.closest('.project-price-tag')) {
+        return;
+      }
+      openSlideLightbox(currentIndex);
+    });
+
+    function openSlideLightbox(idx) {
+      const activeSlide = slides[idx] || slides[0];
+      if (!activeSlide) return;
+      const modal = document.getElementById('planLightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const caption = document.getElementById('lightboxCaption');
+      if (modal && img) {
+        img.src = activeSlide.getAttribute('src');
+        caption.textContent = (activeSlide.getAttribute('alt') || 'High Resolution View') + ' — (Full Size Blueprint)';
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
     slider.addEventListener('mouseenter', () => { isHovered = true; });
     slider.addEventListener('mouseleave', () => { isHovered = false; });
 

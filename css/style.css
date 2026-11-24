@@ -2015,3 +2015,131 @@ img {
   border: 1px solid rgba(59, 130, 246, 0.35);
   color: #60a5fa;
 }
+
+/* ==========================================================================
+   FULL-SIZE PROJECT SLIDERS & UNCONSTRAINED BLUEPRINT PRESENTATION
+   ========================================================================== */
+
+/* Full-Size Slider Container for Flagship Developments (col-12) */
+.col-12 .project-card-image-box.project-slider {
+  height: 560px !important;
+  min-height: 520px !important;
+  background: #05070c !important;
+}
+
+@media (max-width: 991px) {
+  .col-12 .project-card-image-box.project-slider {
+    height: 440px !important;
+    min-height: 400px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .col-12 .project-card-image-box.project-slider {
+    height: 360px !important;
+    min-height: 340px !important;
+  }
+}
+
+/* Regular Col-6 Slider Height Expansion */
+.col-6 .project-card-image-box.project-slider {
+  height: 340px !important;
+  min-height: 320px !important;
+}
+
+@media (max-width: 640px) {
+  .col-6 .project-card-image-box.project-slider {
+    height: 290px !important;
+  }
+}
+
+/* Architectural Plans & Master Layouts: 100% UNCONSTRAINED FIT (Zero Cropping) */
+.project-slide.plan-fit,
+.project-slide[src*="layout"],
+.project-slide[src*="plan"],
+.project-slide[src*="master-plan"] {
+  object-fit: contain !important;
+  background: #06080e !important;
+  padding: 10px;
+}
+
+/* Enable Zoom-in Cursor on Slides */
+.project-slide {
+  cursor: zoom-in;
+}
+
+/* Interactive Full-Screen / Full-Size Trigger Button */
+.slider-fullscreen-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: rgba(10, 14, 22, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 12;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease;
+}
+
+.slider-fullscreen-btn:hover {
+  background: var(--orange);
+  color: #000;
+  border-color: var(--orange-bright);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.5);
+}
+
+/* Lightbox Modal: Unconstrained Full 4K Screen Display */
+#planLightboxModal.open {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(16px);
+  background: rgba(4, 6, 10, 0.94);
+}
+
+#planLightboxModal #lightboxImg {
+  max-width: 95vw !important;
+  max-height: 88vh !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 87, 34, 0.2) !important;
+  border-radius: 14px !important;
+  background: #07090e !important;
+}
+
+/* Plan Preview Box in Detail Pages */
+.plan-preview-container-full {
+  width: 100%;
+  min-height: 580px;
+  max-height: 85vh;
+  background: #06080e;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-preview-container-full img {
+  width: 100%;
+  height: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  cursor: zoom-in;
+  padding: 12px;
+}
